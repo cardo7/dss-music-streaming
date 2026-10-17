@@ -1,0 +1,13 @@
+# Data preparation and loading (A2, A4, A5, A6) - no pandas, as required by the assignment
+pyodbc
+pygeohash
+geopy
+langdetect
+
+# Exploratory analysis and clustering notebooks (A1, A3)
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+jupyter

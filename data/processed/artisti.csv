@@ -1,0 +1,105 @@
+id_author;name;gender;birth_date;birth_place;active_start;province;region;country;latitude;longitude;artist_type;geocode;geo_id
+ART82291002;99 posse;M;;Napoli;1991-01-01;Napoli;Campania;Italia;40.8358846;14.2487679;gruppo;sr60k;1
+ART53496045;achille lauro;M;1990-07-11;Verona;2012-01-01;Verona;Veneto;Italia;45.4424977;10.9857377;solista;u0pf9;2
+ART18853907;alfa;M;2000-08-22;Genova;2017-01-15;;;Italia;44.40726;8.9338624;solista;spyke;3
+ART64265460;anna pepe;F;2003-08-15;La Spezia;2020-01-31;La Spezia;Liguria;Italia;44.238366;9.6912326;solista;spygs;4
+ART75741740;articolo 31;M;;Milano;1990-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;gruppo;u0nd9;5
+ART24123617;babaman;M;1975-08-08;Rho;1989-01-01;Milano;Lombardia;Italia;45.528878;9.04156;solista;u0n7j;6
+ART40229749;baby k;F;1983-02-05;Singapore;2007-01-01;;;Italia;45.0806268;7.6707168;solista;u0j2q;7
+ART56320683;bassi maestro;M;1973-08-03;Milano;1988-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART19605256;beba;F;1994-01-01;Torino;2015-03-13;Torino;Piemonte;Italia;45.0677551;7.6824892;solista;u0j2q;8
+ART02666525;bigmama;F;2000-03-10;Avellino;2001-01-01;Avellino;Campania;Italia;40.9965446;15.140569;solista;sr6c0;9
+ART03111237;brusco;M;;Roma;2001-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART95365016;bushwaka;M;;La Spezia;2015-03-12;La Spezia;Liguria;Italia;44.238366;9.6912326;solista;spygs;4
+ART28846313;caneda;M;1976-09-30;Milano;2006-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART27304446;caparezza;M;1973-10-09;Sternatia;1996-01-01;Lecce;Puglia;Italia;40.222125;18.225226;solista;srhuy;11
+ART70825116;capo plaza;M;1998-04-20;Salerno;2013-02-26;Salerno;Campania;Italia;40.4194416;15.3106085;solista;sr4vu;12
+ART67409252;chadia rodriguez;F;1998-11-07;Almería;2018-04-28;Genova;Liguria;Italia;44.4194958;8.9234821;solista;spyke;13
+ART71969350;clementino;M;1982-12-21;Avellino;2006-04-29;Avellino;Campania;Italia;40.9965446;15.140569;solista;sr6c0;9
+ART81071062;club dogo;M;;Milano;2003-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;gruppo;u0nd9;5
+ART78209349;coez;M;1983-07-11;Nocera Inferiore;2002-01-01;Salerno;Campania;Italia;40.7472133;14.6433202;solista;sr4rv;14
+ART85821920;colle der fomento;M;;Roma;1996-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;gruppo;sr2yk;10
+ART59609037;cor veleno;M;;Roma;1993-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;gruppo;sr2yk;10
+ART46851094;dani faiv;M;1993-11-05;La Spezia;2016-01-01;La Spezia;Liguria;Italia;44.238366;9.6912326;solista;spygs;4
+ART63985757;dargen d_amico;M;1980-11-29;Milano;2006-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART96068455;dark polo gang;M;;Roma;2014-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;gruppo;sr2yk;10
+ART52349448;doll kill;F;;;;;;Italia;;;solista;;15
+ART14383873;don joe;M;1975-05-15;Milano;2011-06-14;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART09119396;drefgold;M;1997-05-16;Bologna;2016-05-16;Bologna;Emilia-Romagna;Italia;44.4938203;11.3426327;solista;srbj4;16
+ART86549066;emis killa;M;1989-11-14;Vimercate;2006-01-01;Monza e della Brianza;Lombardia;Italia;45.6139627;9.37006;solista;u0nem;17
+ART57616402;ensi;M;1985-12-13;Alpignano;2002-01-01;Torino;Piemonte;Italia;45.0957237;7.5254027;solista;u0j2e;18
+ART19729064;entics;M;1985-03-16;Milano;2008-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART76284946;ernia;M;1993-11-29;Milano;2011-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART14073567;eva rea;F;;;;;;Italia;;;solista;;15
+ART25707984;fabri fibra;M;1976-10-17;Senigallia;1996-01-01;Ancona;Marche;Italia;43.7149517;13.2179488;solista;src2s;19
+ART07024718;fedez;M;1989-10-15;Milano;2006-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART46711784;frah quintale;M;1989-12-27;Brescia;2006-01-01;Brescia;Lombardia;Italia;45.7795804;10.425873;solista;u0pkm;20
+ART31005348;frankie hi-nrg mc;M;1969-08-18;Torino;1991-01-01;Torino;Piemonte;Italia;45.0677551;7.6824892;solista;u0j2q;8
+ART52465778;fred de palma;M;1989-11-03;Torino;2012-11-06;Torino;Piemonte;Italia;45.0677551;7.6824892;solista;u0j2q;8
+ART85046033;gemitaiz;M;1988-11-04;Roma;2003-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART87162895;geolier;M;2000-03-23;Napoli;2018-04-19;Napoli;Campania;Italia;40.8358846;14.2487679;solista;sr60k;1
+ART83125571;ghali;M;1993-05-21;Milano;2011-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART73965015;ghemon;M;1982-04-01;Avellino;1996-01-01;Avellino;Campania;Italia;40.9965446;15.140569;solista;sr6c0;9
+ART79325822;grido;M;1979-03-30;Milano;1996-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART04141409;guè pequeno;M;1980-12-25;Milano;2011-06-14;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART91515842;hell raton;M;1990-05-14;Olbia;2011-01-01;Gallura;Sardegna;Italia;40.9232659;9.5027442;solista;spqbb;21
+ART59593021;hindaco;F;1995-01-01;Leonforte;2019-07-12;;;Italia;37.6392121;14.3924267;solista;sqdnp;22
+ART08177154;il tre;M;1997-01-01;Roma;2015-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART57730937;inoki;M;1979-10-02;Roma;1996-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART17812958;j-ax;M;1972-08-05;Milano;1990-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART80977821;jack the smoker;M;1982-12-20;Milano;2006-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART88792008;jake la furia;M;1979-02-25;Milano;1999-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART88199433;joey funboy;F;;;;;;Italia;;;solista;;15
+ART07469279;johnny marsiglia;M;1986-08-05;Palermo;2010-01-01;;;Italia;38.1112268;13.3524434;solista;sqc2z;23
+ART88423027;la pina;F;1970-06-20;Firenze;1995-01-01;Firenze;Toscana;Italia;43.7697955;11.2556404;solista;srb10;24
+ART39344115;lazza;M;1994-08-22;Scampia;2012-01-01;Napoli;Campania;Italia;40.8999881;14.2410519;solista;sr60s;25
+ART05528539;luchè;M;1981-01-07;Napoli;2012-06-19;Napoli;Campania;Italia;40.8358846;14.2487679;solista;sr60k;1
+ART20729624;madame;F;2002-01-16;Vicenza;2018-01-01;Vicenza;Veneto;Italia;45.6348591;11.4063543;solista;u205e;26
+ART40433104;madman;M;1988-07-25;Grottaglie;2006-01-01;Taranto;Puglia;Italia;40.5361927;17.4342206;solista;srhqs;27
+ART16868977;mahmood;M;1992-09-12;Milano;2012-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART61734477;mambolosco;M;1991-08-16;Vicenza;2017-02-04;Vicenza;Veneto;Italia;45.6348591;11.4063543;solista;u205e;26
+ART02733420;marracash;M;1979-05-22;Nicosia;1999-01-01;Enna;Sicilia;Italia;37.747452;14.397271;solista;sqdnx;28
+ART63613967;massimo pericolo;M;1993-11-30;Gallarate;2019-01-22;Varese;Lombardia;Italia;45.6598951;8.7932013;solista;u0n7b;29
+ART37807199;mike24;M;1985-08-02;Avellino;2017-06-27;Avellino;Campania;Italia;40.9965446;15.140569;solista;sr6c0;9
+ART43601431;miss keta;F;;Milano;2013-10-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART51628788;miss simpatia;F;;;;;;Italia;;;solista;;15
+ART48537029;mistaman;M;1976-09-11;Treviso;2005-01-01;Treviso;Veneto;Italia;45.8066913;12.2063158;solista;u20st;30
+ART66452136;mistico;M;1985-01-01;Milano;2011-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART91352277;mondo marcio;M;1986-12-01;Milano;2004-05-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART71846481;mr. rain;M;1991-11-19;Desenzano del Garda;2011-01-01;Brescia;Lombardia;Italia;45.4694851;10.5389467;solista;u0p6x;31
+ART86576759;mudimbi;M;1986-10-17;San Benedetto del Tronto;2013-01-01;Ascoli Piceno;Marche;Italia;42.9525328;13.8807144;solista;sr9u7;32
+ART52272796;neffa;M;1967-10-07;Scafati;1988-01-01;Salerno;Campania;Italia;40.7499887;14.5269491;solista;sr4rf;33
+ART62385172;nerone;M;1991-05-23;Milano;2014-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART07629990;nesli;M;1980-12-29;Senigallia;1990-01-01;Ancona;Marche;Italia;43.7149517;13.2179488;solista;src2s;19
+ART19060721;niky savage;M;1997-07-22;Milano;2021-07-23;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART78358659;nitro;M;1993-02-11;Vicenza;2007-01-01;Vicenza;Veneto;Italia;45.6348591;11.4063543;solista;u205e;26
+ART07127070;noyz narcos;M;1979-12-15;Roma;1996-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART42220690;o zulù;M;1970-11-15;Napoli;1993-01-01;Napoli;Campania;Italia;40.8358846;14.2487679;solista;sr60k;1
+ART12092805;papa v;M;2001-02-19;Pieve Emanuele;2021-02-19;Milano;Lombardia;Italia;45.3559126;9.2020722;solista;u0nd1;34
+ART66932389;piotta;M;1973-04-26;Roma;1994-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART87389753;priestess;F;1996-08-20;Apulia;2003-01-01;;;Italia;40.9842539;16.6210027;gruppo;sr7c4;35
+ART08456301;rancore;M;1989-07-19;Roma;2004-01-01;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART89596800;rkomi;M;1994-04-19;Milano;2012-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART17240256;rocco hunt;M;1994-11-21;Salerno;2009-01-01;Salerno;Campania;Italia;40.4194416;15.3106085;solista;sr4vu;12
+ART08302616;rondodasosa;M;2002-04-29;San Siro;2020-01-16;Milano;Lombardia;Italia;45.4782003;9.123964;solista;u0n6x;36
+ART04205421;rosa chemical;M;1998-01-30;Grugliasco;2015-01-01;Torino;Piemonte;Italia;45.068046;7.57762;solista;u0j2k;37
+ART74676403;rose villain;F;1989-07-20;Milano;2010-01-01;Milano;Lombardia;Italia;45.4641943;9.1896346;solista;u0nd9;5
+ART02449272;roshelle;F;1995-09-18;Lodi;2016-01-01;Lodi;Lombardia;Italia;45.2613104;9.4916781;solista;u0n9r;38
+ART48622722;salmo;M;1984-06-29;Olbia;1997-01-01;Gallura;Sardegna;Italia;40.9232659;9.5027442;solista;spqbb;21
+ART56967402;samuel heron;M;1991-01-01;La Spezia;2016-01-01;La Spezia;Liguria;Italia;44.238366;9.6912326;solista;spygs;4
+ART87497821;sfera ebbasta;M;1992-12-07;Sesto San Giovanni;2011-01-01;Milano;Lombardia;Italia;45.5357218;9.2376549;solista;u0ne4;39
+ART98307962;shablo;M;1980-11-17;Buenos Aires;2008-05-01;;;Italia;44.8037407;10.1430038;solista;spzny;40
+ART26418649;shade;M;1987-12-10;Torino;2005-01-01;Torino;Piemonte;Italia;45.0677551;7.6824892;solista;u0j2q;8
+ART64850829;shiva;M;1999-08-27;Legnano;2015-10-06;;;Italia;45.5946464;8.9181625;solista;u0n76;41
+ART41225226;skioffi;M;1992-06-05;Roma;2019-06-14;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART28717687;slait;M;1987-01-24;Olbia;2012-01-01;Gallura;Sardegna;Italia;40.9232659;9.5027442;solista;spqbb;21
+ART22979236;sottotono;M;;Varese;1994-01-01;;;Italia;45.8397203;8.7541338;gruppo;u0nhz;42
+ART85780419;tedua;M;1994-02-21;Genova;2015-10-01;Genova;Liguria;Italia;44.40726;8.9338624;solista;spyke;3
+ART88026810;thasup;M;2001-03-17;Fiumicino;2015-01-01;Roma;Lazio;Italia;41.7712145;12.2278855;solista;sr2tw;43
+ART51721248;tony boy;M;1999-09-26;Padova;2019-01-01;Padova;Veneto;Italia;45.391408;11.8058487;solista;u206h;44
+ART57242110;tony effe;M;1991-05-17;Roma;2015-05-19;Roma;Lazio;Italia;41.8933203;12.4829321;solista;sr2yk;10
+ART98118784;tormento;M;1975-09-06;Reggio Calabria;2006-06-01;Reggio Calabria;Calabria;Italia;38.1035389;15.6397556;solista;sqg0g;45
+ART15560128;vacca;M;1979-10-21;Cagliari;2001-01-01;Cagliari;Sardegna;Italia;39.2171994;9.113311;solista;snyrp;46
+ART57587384;willie peyote;M;1985-08-28;Torino;2004-01-01;Torino;Piemonte;Italia;45.0677551;7.6824892;solista;u0j2q;8
+ART71515715;yeиdry;F;1993-07-27;Santo Domingo;2019-12-06;;;Italia;-0.2465977;-79.1394496;solista;6pzwx;47
+ART83631935;yung snapp;M;1996-08-06;Napoli;2014-01-01;Napoli;Campania;Italia;40.8358846;14.2487679;solista;sr60k;1

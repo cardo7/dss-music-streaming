@@ -1,0 +1,364 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="44e2ed38-bac5-41ed-a25b-a2f8522a67df" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Group ID 6 DB</ID>
+  <Name>Group ID 6 DB</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Group_ID 6_DB</DataSourceID>
+  <Schema>
+    <xs:schema id="Group_x0020_ID_x0020_6_x0020_DB" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Group_x0020_ID_x0020_6_x0020_DB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="3421c8fd-c70c-4339-a3aa-92716f3bfe2e">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Group_ID_6_AlbumDim" msprop:design-time-name="f8a51f88-05f5-459b-bc3c-a8233c0fb739" msprop:DbTableName="AlbumDim" msprop:FriendlyName="AlbumDim" msprop:DbSchemaName="Group_ID_6" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="album_id" msprop:design-time-name="242eef84-e29d-4e39-a67e-e499f492eddc" msprop:DbColumnName="album_id" msprop:FriendlyName="album_id">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="album_name" msprop:design-time-name="633cf8e3-4303-43c7-8bb5-f9a4917219ca" msprop:DbColumnName="album_name" msprop:FriendlyName="album_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="album_release_date" msprop:design-time-name="f4a8313a-774e-4495-b5b1-6139340e3743" msprop:DbColumnName="album_release_date" msprop:FriendlyName="album_release_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="album_type" msprop:design-time-name="ff85e2eb-a6e8-4e5c-b60a-1000f506cace" msprop:DbColumnName="album_type" msprop:FriendlyName="album_type" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="disc_number" msprop:design-time-name="0ab4e144-82d2-4a9f-b7e7-ae18b16896a1" msprop:DbColumnName="disc_number" msprop:FriendlyName="disc_number" type="xs:int" minOccurs="0" />
+                  <xs:element name="track_number" msprop:design-time-name="11db7c00-ba03-47c7-88a8-645bc3d8c626" msprop:DbColumnName="track_number" msprop:FriendlyName="track_number" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_ID_6_ArtistDim" msprop:design-time-name="b0143741-5880-49f3-8800-5dbc6dc7ed54" msprop:DbTableName="ArtistDim" msprop:FriendlyName="ArtistDim" msprop:DbSchemaName="Group_ID_6" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_author" msprop:design-time-name="06489ea5-736a-4ee8-a2ef-2cc314c8728c" msprop:DbColumnName="id_author" msprop:FriendlyName="id_author">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="name" msprop:design-time-name="b389cbee-4e0a-4b7f-9584-8ca2c8f0568f" msprop:DbColumnName="name" msprop:FriendlyName="name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gender" msprop:design-time-name="7cbdc125-0655-4cef-8982-9baf1946ce4c" msprop:DbColumnName="gender" msprop:FriendlyName="gender" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="birth_date" msprop:design-time-name="829997b3-dafb-4bc1-8662-03abef1fd9a5" msprop:DbColumnName="birth_date" msprop:FriendlyName="birth_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="active_start" msprop:design-time-name="4bc17b3e-bcf6-48de-b690-3c936a00602f" msprop:DbColumnName="active_start" msprop:FriendlyName="active_start" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="artist_type" msprop:design-time-name="71f82c0e-827d-44d0-af7e-b27790e88015" msprop:DbColumnName="artist_type" msprop:FriendlyName="artist_type" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="geo_id" msprop:design-time-name="f20ba7ea-03b6-4a03-a9d8-4c38d1819fba" msprop:DbColumnName="geo_id" msprop:FriendlyName="geo_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_ID_6_DateDim" msprop:design-time-name="0969b2e6-85aa-41f7-a565-bba2f7838d44" msprop:DbTableName="DateDim" msprop:FriendlyName="DateDim" msprop:DbSchemaName="Group_ID_6" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="date_id" msprop:design-time-name="a56194ee-2e80-4dfc-a898-30cd1d65c526" msprop:DbColumnName="date_id" msprop:FriendlyName="date_id" type="xs:int" />
+                  <xs:element name="day" msprop:design-time-name="1557b5a3-17bd-416b-aa04-c19d44c72712" msprop:DbColumnName="day" msprop:FriendlyName="day" type="xs:int" minOccurs="0" />
+                  <xs:element name="month" msprop:design-time-name="d5ea3028-63ac-4ab2-94b6-f9d8f6184326" msprop:DbColumnName="month" msprop:FriendlyName="month" type="xs:int" minOccurs="0" />
+                  <xs:element name="year" msprop:design-time-name="b79501c3-c59c-4596-86e0-820b1ef620c3" msprop:DbColumnName="year" msprop:FriendlyName="year" type="xs:int" minOccurs="0" />
+                  <xs:element name="season" msprop:design-time-name="2ce5b3ff-1da7-40a8-a9ae-340449aa3a07" msprop:DbColumnName="season" msprop:FriendlyName="season" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="weekday" msprop:design-time-name="dd534e39-5841-4cf5-8c07-19fb728ead40" msprop:DbColumnName="weekday" msprop:FriendlyName="weekday" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_ID_6_FactSong" msprop:design-time-name="28471cb7-db93-4750-9965-6cbefad5cee3" msprop:DbTableName="FactSong" msprop:FriendlyName="FactSong" msprop:DbSchemaName="Group_ID_6" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_track" msprop:design-time-name="28abd9da-3bc2-4d14-beb4-174bb8a37ccd" msprop:DbColumnName="id_track" msprop:FriendlyName="id_track">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="title" msprop:design-time-name="16785a32-a2a7-4028-997e-6a3bd403151d" msprop:DbColumnName="title" msprop:FriendlyName="title" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="streams_1month" msprop:design-time-name="424ddf43-c58b-46bf-ba52-a9b836b7bd10" msprop:DbColumnName="streams_1month" msprop:FriendlyName="streams_1month" type="xs:int" minOccurs="0" />
+                  <xs:element name="symp_id" msprop:design-time-name="0102a038-aaa9-4496-ac89-3f7ca01ad13d" msprop:DbColumnName="symp_id" msprop:FriendlyName="symp_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="text_id" msprop:design-time-name="216eb7a1-fc39-4ec7-8d7a-ad929662eb05" msprop:DbColumnName="text_id" msprop:FriendlyName="text_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_author" msprop:design-time-name="1d7167ad-7530-4053-9b39-3e9adde376f4" msprop:DbColumnName="id_author" msprop:FriendlyName="id_author" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="album_id" msprop:design-time-name="99f803ec-b1a2-4068-8298-783b4d027f48" msprop:DbColumnName="album_id" msprop:FriendlyName="album_id" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_id" msprop:design-time-name="29b95c20-2fce-4a1c-813a-d0322db0535a" msprop:DbColumnName="date_id" msprop:FriendlyName="date_id" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_ID_6_GeographyDim" msprop:design-time-name="972c2fd6-a199-45da-afce-92cb8bcc2d23" msprop:DbTableName="GeographyDim" msprop:FriendlyName="GeographyDim" msprop:DbSchemaName="Group_ID_6" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="geo_id" msprop:design-time-name="cb5ef406-5bd3-4806-b3a2-31f0bce32199" msprop:DbColumnName="geo_id" msprop:FriendlyName="geo_id">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="birth_place" msprop:design-time-name="c49068c3-bf21-4673-b1c5-a454d485f341" msprop:DbColumnName="birth_place" msprop:FriendlyName="birth_place" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="province" msprop:design-time-name="f67e37ea-c484-4d08-8748-afb1c03ad4e8" msprop:DbColumnName="province" msprop:FriendlyName="province" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region" msprop:design-time-name="cfb9e5a8-2f41-40f1-9b73-8961cd80044d" msprop:DbColumnName="region" msprop:FriendlyName="region" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country" msprop:design-time-name="c3b0b0eb-4c6b-4cc4-9d48-2dea5ba6558b" msprop:DbColumnName="country" msprop:FriendlyName="country" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="latitude" msprop:design-time-name="0a2a4d01-6c8e-4cca-8478-071551c6afaa" msprop:DbColumnName="latitude" msprop:FriendlyName="latitude" type="xs:double" minOccurs="0" />
+                  <xs:element name="longitude" msprop:design-time-name="be0e7806-2465-4dcf-a551-f18ca2755700" msprop:DbColumnName="longitude" msprop:FriendlyName="longitude" type="xs:double" minOccurs="0" />
+                  <xs:element name="geocode" msprop:design-time-name="0d50c3a0-b2f0-414f-8d35-0b8316b52870" msprop:DbColumnName="geocode" msprop:FriendlyName="geocode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_ID_6_SymphonyDim" msprop:design-time-name="a2350cca-015b-4e18-8fea-237318991e63" msprop:DbTableName="SymphonyDim" msprop:FriendlyName="SymphonyDim" msprop:DbSchemaName="Group_ID_6" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="symp_id" msprop:design-time-name="6f91da8a-3dea-453a-ab4a-f5cd3da23cf6" msprop:DbColumnName="symp_id" msprop:FriendlyName="symp_id">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="bpm" msprop:design-time-name="816bd2ea-8ec7-4a9c-96f8-0b684dab2040" msprop:DbColumnName="bpm" msprop:FriendlyName="bpm" type="xs:double" minOccurs="0" />
+                  <xs:element name="rolloff" msprop:design-time-name="826e3ffb-f914-4e44-ac1f-fafbd26fe121" msprop:DbColumnName="rolloff" msprop:FriendlyName="rolloff" type="xs:double" minOccurs="0" />
+                  <xs:element name="flux" msprop:design-time-name="24923d10-5c8b-403d-ab92-0e496a66e78c" msprop:DbColumnName="flux" msprop:FriendlyName="flux" type="xs:double" minOccurs="0" />
+                  <xs:element name="rms" msprop:design-time-name="8bbbb51b-4759-4783-8b50-6bb57c1993d4" msprop:DbColumnName="rms" msprop:FriendlyName="rms" type="xs:double" minOccurs="0" />
+                  <xs:element name="flatness" msprop:design-time-name="4bc63797-5ae7-44de-a2fb-780f0462ce21" msprop:DbColumnName="flatness" msprop:FriendlyName="flatness" type="xs:double" minOccurs="0" />
+                  <xs:element name="spectral_complexity" msprop:design-time-name="96575723-9f1e-4df5-9b3c-386a0d3a85d8" msprop:DbColumnName="spectral_complexity" msprop:FriendlyName="spectral_complexity" type="xs:double" minOccurs="0" />
+                  <xs:element name="pitch" msprop:design-time-name="843f0a65-003d-4b60-b2a5-f71a1810c367" msprop:DbColumnName="pitch" msprop:FriendlyName="pitch" type="xs:double" minOccurs="0" />
+                  <xs:element name="loudness" msprop:design-time-name="92ec0ded-8650-4f00-8a78-40a42349ef34" msprop:DbColumnName="loudness" msprop:FriendlyName="loudness" type="xs:double" minOccurs="0" />
+                  <xs:element name="duration_ms" msprop:design-time-name="5bba6d72-f092-40ba-8f44-10a3fec78289" msprop:DbColumnName="duration_ms" msprop:FriendlyName="duration_ms" type="xs:int" minOccurs="0" />
+                  <xs:element name="popularity" msprop:design-time-name="469a6b27-057c-4113-941d-794c185cf53d" msprop:DbColumnName="popularity" msprop:FriendlyName="popularity" type="xs:int" minOccurs="0" />
+                  <xs:element name="audio_label" msprop:design-time-name="dd122cc3-ac3f-4417-85f6-022dec4d6755" msprop:DbColumnName="audio_label" msprop:FriendlyName="audio_label" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_ID_6_TextDim" msprop:design-time-name="7f4dc459-2c04-4fe1-a5b4-c806e58b1355" msprop:DbTableName="TextDim" msprop:FriendlyName="TextDim" msprop:DbSchemaName="Group_ID_6" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="text_id" msprop:design-time-name="f07c7298-682f-4fb5-ab61-394f3eacba00" msprop:DbColumnName="text_id" msprop:FriendlyName="text_id">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="lyrics" msprop:design-time-name="02513181-7a7d-47b6-8a7a-402d2f78c3e2" msprop:DbColumnName="lyrics" msprop:FriendlyName="lyrics" type="xs:string" minOccurs="0" />
+                  <xs:element name="featured_artists" msprop:design-time-name="4348023c-ac17-424a-8d5c-fef2d5e7e652" msprop:DbColumnName="featured_artists" msprop:FriendlyName="featured_artists" type="xs:string" minOccurs="0" />
+                  <xs:element name="language" msprop:design-time-name="b2723a28-307e-4c4e-8301-d9ac62a897f7" msprop:DbColumnName="language" msprop:FriendlyName="language" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="explicit" msprop:design-time-name="5384d679-c65f-44be-a58d-9e67fe94f1c9" msprop:DbColumnName="explicit" msprop:FriendlyName="explicit" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="swear_IT" msprop:design-time-name="63ae2a69-928f-44a2-89fe-fc3e6850d558" msprop:DbColumnName="swear_IT" msprop:FriendlyName="swear_IT" type="xs:int" minOccurs="0" />
+                  <xs:element name="swear_EN" msprop:design-time-name="4387defe-0c73-4433-8ce7-b61b7790b86f" msprop:DbColumnName="swear_EN" msprop:FriendlyName="swear_EN" type="xs:int" minOccurs="0" />
+                  <xs:element name="swear_IT_words" msprop:design-time-name="4026d96d-1714-4d07-bcaa-5020a959582e" msprop:DbColumnName="swear_IT_words" msprop:FriendlyName="swear_IT_words" type="xs:string" minOccurs="0" />
+                  <xs:element name="swear_EN_words" msprop:design-time-name="c587c986-4e83-411e-b069-dea3eef7054e" msprop:DbColumnName="swear_EN_words" msprop:FriendlyName="swear_EN_words" type="xs:string" minOccurs="0" />
+                  <xs:element name="n_sentences" msprop:design-time-name="7e59f83a-3e30-4624-8ce6-35637316c738" msprop:DbColumnName="n_sentences" msprop:FriendlyName="n_sentences" type="xs:int" minOccurs="0" />
+                  <xs:element name="n_tokens" msprop:design-time-name="f4a4ed71-82fe-4f57-bd14-77ccc6d7123f" msprop:DbColumnName="n_tokens" msprop:FriendlyName="n_tokens" type="xs:int" minOccurs="0" />
+                  <xs:element name="char_per_tok" msprop:design-time-name="51b1039e-85d6-4567-8362-9cb4d03a72ad" msprop:DbColumnName="char_per_tok" msprop:FriendlyName="char_per_tok" type="xs:double" minOccurs="0" />
+                  <xs:element name="avg_token_per_clause" msprop:design-time-name="c42c359c-a6e6-4722-b296-76b5b3ea98be" msprop:DbColumnName="avg_token_per_clause" msprop:FriendlyName="avg_token_per_clause" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_ID_6_AlbumDim" />
+          <xs:field xpath="album_id" />
+        </xs:unique>
+        <xs:unique name="Group_ID_6_ArtistDim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_ID_6_ArtistDim" />
+          <xs:field xpath="id_author" />
+        </xs:unique>
+        <xs:unique name="Group_ID_6_DateDim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_ID_6_DateDim" />
+          <xs:field xpath="date_id" />
+        </xs:unique>
+        <xs:unique name="Group_ID_6_FactSong_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_ID_6_FactSong" />
+          <xs:field xpath="id_track" />
+        </xs:unique>
+        <xs:unique name="Group_ID_6_GeographyDim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_ID_6_GeographyDim" />
+          <xs:field xpath="geo_id" />
+        </xs:unique>
+        <xs:unique name="Group_ID_6_SymphonyDim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_ID_6_SymphonyDim" />
+          <xs:field xpath="symp_id" />
+        </xs:unique>
+        <xs:unique name="Group_ID_6_TextDim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_ID_6_TextDim" />
+          <xs:field xpath="text_id" />
+        </xs:unique>
+        <xs:keyref name="FK__FactSong__symp_i__68336F3E" refer="Group_ID_6_SymphonyDim_Constraint1">
+          <xs:selector xpath=".//Group_ID_6_FactSong" />
+          <xs:field xpath="symp_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactSong__date_i__673F4B05" refer="Group_ID_6_DateDim_Constraint1">
+          <xs:selector xpath=".//Group_ID_6_FactSong" />
+          <xs:field xpath="date_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactSong__album___664B26CC" refer="Constraint1">
+          <xs:selector xpath=".//Group_ID_6_FactSong" />
+          <xs:field xpath="album_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactSong__text_i__69279377" refer="Group_ID_6_TextDim_Constraint1">
+          <xs:selector xpath=".//Group_ID_6_FactSong" />
+          <xs:field xpath="text_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactSong__id_aut__65570293" refer="Group_ID_6_ArtistDim_Constraint1">
+          <xs:selector xpath=".//Group_ID_6_FactSong" />
+          <xs:field xpath="id_author" />
+        </xs:keyref>
+        <xs:keyref name="FK__ArtistDim__geo_i__5AD97420" refer="Group_ID_6_GeographyDim_Constraint1">
+          <xs:selector xpath=".//Group_ID_6_ArtistDim" />
+          <xs:field xpath="geo_id" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Group_x0020_ID_x0020_6_x0020_DB xmlns="" />
+  </Schema>
+</DataSourceView>

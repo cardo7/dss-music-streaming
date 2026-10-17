@@ -1,0 +1,26 @@
+SELECT 
+    NON EMPTY { 
+        EXCEPT(
+            [Date Dim].[Year].[Year].Members,
+            { [Date Dim].[Year].[Unknown] }
+        )
+        * 
+        { 
+            [Date Dim].[Month].[Month].Members,
+            [Date Dim].[Month].[All]
+        }
+    } ON COLUMNS,
+
+    NON EMPTY {
+        
+        FILTER(
+            [Geography Dim].[Region].Children,
+            Len([Geography Dim].[Region].CurrentMember.Name) > 0 
+        ),
+
+        { [Geography Dim].[Region].[All] }
+
+    } ON ROWS
+
+FROM [Group ID 6 DB]
+WHERE ( [Measures].[Streams 1month] )

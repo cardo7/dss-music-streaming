@@ -1,0 +1,37 @@
+-- Assignment 19 - Relative Popularity Index (RPI)
+-- Regional share of each audio category compared with its national share.
+-- RPI > 1: the category is more popular in that region than in the country as a whole.
+WITH
+MEMBER [Measures].[Calc_Region_Share] AS
+    DIVIDE(
+        [Measures].[Streams 1month],
+        ([Measures].[Streams 1month], [Symphony Dim].[Audio Label].[All]),
+        0
+    ), FORMAT_STRING = "Percent"
+
+MEMBER [Measures].[Calc_Global_Share] AS
+    DIVIDE(
+        ([Measures].[Streams 1month], [Geography Dim].[Hierarchy].[All]),
+        ([Measures].[Streams 1month], [Geography Dim].[Hierarchy].[All], [Symphony Dim].[Audio Label].[All]),
+        0
+    ), FORMAT_STRING = "Percent"
+
+MEMBER [Measures].[Calc_Penetration_Index] AS
+    IIF(
+        [Measures].[Calc_Global_Share] = 0,
+        0,
+        [Measures].[Calc_Region_Share] / [Measures].[Calc_Global_Share]
+    ), FORMAT_STRING = "0.00"
+
+SELECT
+{
+    [Measures].[Calc_Region_Share],
+    [Measures].[Calc_Global_Share],
+    [Measures].[Calc_Penetration_Index]
+} ON COLUMNS,
+NON EMPTY
+(
+    [Geography Dim].[Hierarchy].[Region].Members
+    * [Symphony Dim].[Audio Label].[Audio Label].Members
+) ON ROWS
+FROM [Group ID 6 DB]

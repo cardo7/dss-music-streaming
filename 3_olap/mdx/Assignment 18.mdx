@@ -1,0 +1,48 @@
+WITH
+
+/* =========================================
+   Media degli stream della stessa stagione
+   nell’anno precedente
+   ========================================= */
+MEMBER [Measures].[Prev_Season_Avg] AS
+    AVG(
+        ParallelPeriod(
+            [Date Dim].[Year].[Year],
+            1,
+            [Date Dim].[Year].CurrentMember
+        ),
+        [Measures].[Streams 1month]
+    )
+
+/* =========================================
+   Percentuale di incremento
+   ========================================= */
+MEMBER [Measures].[Season_Increase_Percentage] AS
+    IIF(
+        [Measures].[Prev_Season_Avg] = 0,
+        NULL,
+        (
+            [Measures].[Streams 1month]
+            - [Measures].[Prev_Season_Avg]
+        )
+        / [Measures].[Prev_Season_Avg]
+    ), FORMAT_STRING = 'Percent'
+
+SELECT
+NON EMPTY {
+    [Measures].[Streams 1month],
+    [Measures].[Prev_Season_Avg],
+    [Measures].[Season_Increase_Percentage]
+} ON COLUMNS,
+
+NON EMPTY
+FILTER(
+    (
+        [Symphony Dim].[audio label].Members
+        *
+        [Date Dim].[Season].Members
+    ),
+    [Measures].[Streams 1month] > [Measures].[Prev_Season_Avg]
+) ON ROWS
+
+FROM [Group ID 6 DB]

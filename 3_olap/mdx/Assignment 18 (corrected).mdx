@@ -1,0 +1,40 @@
+-- Assignment 18 (corrected version, written after the delivery)
+-- For each season, list the categories whose streams exceed the average of the
+-- same season in the previous year, and report the increase as a percentage.
+--
+-- Why the original query did not work: the year was not on any axis, so
+-- [Date Dim].[Year].CurrentMember was the [All] member and ParallelPeriod(...)
+-- returned an empty member -> the previous-season average was always empty.
+--
+-- Here the year is on the rows; for each (year, season, category) the average is
+-- computed over all categories in the SAME season of the PREVIOUS year.
+WITH
+MEMBER [Measures].[Prev Season Avg] AS
+    AVG(
+        [Symphony Dim].[Audio Label].[Audio Label].Members,
+        ( [Measures].[Streams 1month],
+          [Date Dim].[Year].CurrentMember.PrevMember )
+    )
+
+MEMBER [Measures].[Increase %] AS
+    IIF(
+        ISEMPTY([Measures].[Prev Season Avg]) OR [Measures].[Prev Season Avg] = 0,
+        NULL,
+        ([Measures].[Streams 1month] - [Measures].[Prev Season Avg])
+            / [Measures].[Prev Season Avg]
+    ),
+    FORMAT_STRING = "Percent"
+
+SELECT
+    { [Measures].[Streams 1month],
+      [Measures].[Prev Season Avg],
+      [Measures].[Increase %] } ON COLUMNS,
+    NON EMPTY
+    FILTER(
+        EXCEPT([Date Dim].[Year].[Year].Members, { [Date Dim].[Year].[Unknown] })
+        * [Date Dim].[Season].[Season].Members
+        * [Symphony Dim].[Audio Label].[Audio Label].Members,
+        NOT ISEMPTY([Measures].[Prev Season Avg])
+        AND [Measures].[Streams 1month] > [Measures].[Prev Season Avg]
+    ) ON ROWS
+FROM [Group ID 6 DB]

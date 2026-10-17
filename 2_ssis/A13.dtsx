@@ -1,0 +1,2606 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/19/2025 5:36:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-HR70SNN"
+  DTS:CreatorName="DESKTOP-HR70SNN\utente"
+  DTS:DTSID="{C1581104-0CAC-4AEC-A59E-F0AFF9F84167}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="A13"
+  DTS:PackageType="5"
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{987DED89-11CF-4DEE-B129-9EC90DC3EAF1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E94437FE-BA33-4DD6-B43F-3DF04D6A4ABF}"
+      DTS:ObjectName="localhost.Group_ID_6_DB.Group_ID_6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=Group_ID_6;Initial Catalog=Group_ID_6_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{E94437FE-BA33-4DD6-B43F-3DF04D6A4ABF}localhost.Group_ID_6_DB.Group_ID_6;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANpJ+l0NJNkasIJIinD0ApQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA4UseQdMmTLME/b+ai80gd+JBTlLSK7W97yn7mtO0YsAAAAAAOgAAAAAIAACAAAACdtevXnEQC4/qjDZw8Q+wdL+m50/9128K3MjUVR2sMiiAAAAATJp78QEtY3aHCC5lsW+fUWp2H4qYS7b69kIrMLuNGwkAAAABVnh1oBRsWUUHeD0/7e5yzU0TEoXYPFVnZ1BcAvVBLPazcO6EWULNCpylMzEmxigdcLqhsjdJmFmKDaMYKstYO</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Ass13]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A21C9F6A-7CA6-46B7-9236-AC99477EF294}"
+      DTS:ObjectName="Ass13">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\riky9\source\repos\ssis_project_Group6\output\output_ass_13.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{95BBB346-7D33-460F-8E41-46A4B5AE0657}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stream_Album"
+              DTS:DTSID="{E80917F2-2837-4D66-941E-4431173CDC90}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stream_Singoli"
+              DTS:DTSID="{F2CD51EE-69E5-4F23-89F7-62FC21863616}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Numero_Tracce_A"
+              DTS:DTSID="{97714E4D-F052-45F4-B391-FFA742B4A1AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Numero_Tracce_S"
+              DTS:DTSID="{F06C2712-CF6A-4F4C-8E16-CED0DC4CC183}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gap_Percentuale (%)"
+              DTS:DTSID="{831086B1-CC89-4D01-A33A-3E275F00A8CD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Attività Flusso di dati"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{D326F519-45C6-40DC-9B8B-0D4408F2B3E6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Flusso di dati"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversione dati;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Conversione dati"
+              name="Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Inputs[Input conversione dati]"
+                  name="Input conversione dati">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Inputs[Input conversione dati].Columns[Stream_Album]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Album"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Album]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Inputs[Input conversione dati].Columns[Stream_Singoli]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Singoli"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Singoli]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Inputs[Input conversione dati].Columns[Gap_Percentuale (%)]"
+                      cachedDataType="numeric"
+                      cachedName="Gap_Percentuale (%)"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output colonna derivata].Columns[Gap_Percentuale (%)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati]"
+                  exclusionGroup="1"
+                  name="Output conversione dati"
+                  synchronousInputId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Inputs[Input conversione dati]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Stream_Album_INT]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Stream_Album_INT]"
+                      name="Stream_Album_INT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica la colonna di input utilizzata come origine dati per la conversione."
+                          name="SourceInputColumnLineageID">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Album]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se la colonna utilizza le routine di analisi più veloci indipendenti dalle impostazioni locali."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Stream_Singoli_INT]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Stream_Singoli_INT]"
+                      name="Stream_Singoli_INT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica la colonna di input utilizzata come origine dati per la conversione."
+                          name="SourceInputColumnLineageID">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Singoli]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se la colonna utilizza le routine di analisi più veloci indipendenti dalle impostazioni locali."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Gap_Percentuale_ (%)]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Gap_Percentuale_ (%)]"
+                      name="Gap_Percentuale_ (%)"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica la colonna di input utilizzata come origine dati per la conversione."
+                          name="SourceInputColumnLineageID">#{Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output colonna derivata].Columns[Gap_Percentuale (%)]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se la colonna utilizza le routine di analisi più veloci indipendenti dalle impostazioni locali."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output errori conversione dati]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori conversione dati"
+                  synchronousInputId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Inputs[Input conversione dati]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output errori conversione dati].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output errori conversione dati].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output errori conversione dati].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output errori conversione dati].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonna derivata;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea nuovi valori di colonna applicando espressioni alle colonne di input della trasformazione. Creare nuove colonne oppure sovrascrivere quelle esistenti. Ad esempio, concatenare i valori delle colonne 'first name' e 'last name' per creare una colonna 'full name'."
+              name="Calcolo Gap Percentuale"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Inputs[Input colonna derivata]"
+                  description="Input della trasformazione Colonna derivata"
+                  name="Input colonna derivata">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Inputs[Input colonna derivata].Columns[Stream_Album]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Album"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Album]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Inputs[Input colonna derivata].Columns[Stream_Singoli]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Singoli"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Singoli]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output colonna derivata]"
+                  description="Output predefinito della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  name="Output colonna derivata"
+                  synchronousInputId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output colonna derivata].Columns[Gap_Percentuale (%)]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output colonna derivata].Columns[Gap_Percentuale (%)]"
+                      name="Gap_Percentuale (%)"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">(DT_NUMERIC,10,2)([ROUND](((#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Album]} - #{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Singoli]}) / (DT_R8)#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Singoli]}) * 100,2))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,10,2)(ROUND(((Stream_Album - Stream_Singoli) / (DT_R8)Stream_Singoli) * 100,2))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output errori colonna derivata]"
+                  description="Output degli errori della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori colonna derivata"
+                  synchronousInputId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="GROUP BY region, AVG streams_1month, COUNT tracce per album"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Inputs[Input aggregazione 1].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Inputs[Input aggregazione 1].Columns[streams_1month]"
+                      cachedDataType="i4"
+                      cachedName="streams_1month"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[streams_1month]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Inputs[Input aggregazione 1].Columns[id_track]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="id_track"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_track]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[region]"
+                      name="region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Stream_Album]"
+                      dataType="r8"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Stream_Album]"
+                      name="Stream_Album">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[streams_1month]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Numero_Tracce_A]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Numero_Tracce_A]"
+                      name="Numero_Tracce_A">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_track]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="GROUP BY region, AVG streams_1month, COUNT tracce per singolo"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Inputs[Input aggregazione 1].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Inputs[Input aggregazione 1].Columns[streams_1month]"
+                      cachedDataType="i4"
+                      cachedName="streams_1month"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[streams_1month]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Inputs[Input aggregazione 1].Columns[id_track]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="id_track"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_track]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[region]"
+                      name="region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Stream_Singoli]"
+                      dataType="r8"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Stream_Singoli]"
+                      name="Stream_Singoli">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[streams_1month]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Numero_Tracce_S]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Numero_Tracce_S]"
+                      name="Numero_Tracce_S">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_track]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="id_author, album_id, streams_1month"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_ID_6].[FactSong]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[id_author]"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_author]"
+                      name="id_author"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[album_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[album_id]"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[album_id]"
+                      name="album_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[streams_1month]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[streams_1month]"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[streams_1month]"
+                      name="streams_1month"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_track]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[id_track]"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_track]"
+                      name="id_track"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[id_track]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="id_track" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[streams_1month]"
+                      dataType="i4"
+                      name="streams_1month" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[symp_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="symp_id" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[text_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="text_id" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="id_author" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[album_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="album_id" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      dataType="i4"
+                      name="date_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[id_author]"
+                      name="id_author" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[album_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[album_id]"
+                      name="album_id" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[streams_1month]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[streams_1month]"
+                      name="streams_1month" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[id_track]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output errori origine OLE DB].Columns[id_track]"
+                      name="id_track" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[Stream_Album]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Album"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[Stream_Album]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[Numero_Tracce_A]"
+                      cachedDataType="ui8"
+                      cachedName="Numero_Tracce_A"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[Numero_Tracce_A]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[Stream_Singoli]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Singoli"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[Stream_Singoli]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[Numero_Tracce_S]"
+                      cachedDataType="ui8"
+                      cachedName="Numero_Tracce_S"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[Numero_Tracce_S]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[region]"
+                      name="region"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Album]"
+                      dataType="r8"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Album]"
+                      name="Stream_Album">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[Stream_Album]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Singoli]"
+                      dataType="r8"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Stream_Singoli]"
+                      name="Stream_Singoli">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[Stream_Singoli]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Numero_Tracce_A]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Numero_Tracce_A]"
+                      name="Numero_Tracce_A">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[Numero_Tracce_A]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Numero_Tracce_S]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Numero_Tracce_S]"
+                      name="Numero_Tracce_S">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[Numero_Tracce_S]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ordinamento su region su album"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento su region su album"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ordinamento su region su album.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region su album.Inputs[Input ordinamento].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[region]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region su album.Inputs[Input ordinamento].Columns[Stream_Album]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Album"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Stream_Album]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region su album.Inputs[Input ordinamento].Columns[Numero_Tracce_A]"
+                      cachedDataType="ui8"
+                      cachedName="Numero_Tracce_A"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Numero_Tracce_A]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[region]"
+                      name="region"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[Stream_Album]"
+                      dataType="r8"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[Stream_Album]"
+                      name="Stream_Album">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Stream_Album]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[Numero_Tracce_A]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento].Columns[Numero_Tracce_A]"
+                      name="Numero_Tracce_A">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1].Columns[Numero_Tracce_A]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento su region sui singoli"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Inputs[Input ordinamento].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[region]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Inputs[Input ordinamento].Columns[Stream_Singoli]"
+                      cachedDataType="r8"
+                      cachedName="Stream_Singoli"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Stream_Singoli]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Inputs[Input ordinamento].Columns[Numero_Tracce_S]"
+                      cachedDataType="ui8"
+                      cachedName="Numero_Tracce_S"
+                      lineageId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Numero_Tracce_S]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[region]"
+                      name="region"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[Stream_Singoli]"
+                      dataType="r8"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[Stream_Singoli]"
+                      name="Stream_Singoli">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Stream_Singoli]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[Numero_Tracce_S]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento].Columns[Numero_Tracce_S]"
+                      name="Numero_Tracce_S">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1].Columns[Numero_Tracce_S]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Output finale su csv"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="Output finale su csv"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Output finale su csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Ass13]"
+                  connectionManagerRefId="Package.ConnectionManagers[Ass13]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[region]"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].Columns[Stream_Album_INT]"
+                      cachedDataType="i8"
+                      cachedName="Stream_Album_INT"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Stream_Album]"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Stream_Album_INT]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].Columns[Stream_Singoli_INT]"
+                      cachedDataType="i8"
+                      cachedName="Stream_Singoli_INT"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Stream_Singoli]"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Stream_Singoli_INT]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].Columns[Gap_Percentuale_ (%)]"
+                      cachedDataType="numeric"
+                      cachedName="Gap_Percentuale_ (%)"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Gap_Percentuale (%)]"
+                      lineageId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati].Columns[Gap_Percentuale_ (%)]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].Columns[Numero_Tracce_A]"
+                      cachedDataType="ui8"
+                      cachedName="Numero_Tracce_A"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Numero_Tracce_A]"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Numero_Tracce_A]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].Columns[Numero_Tracce_S]"
+                      cachedDataType="ui8"
+                      cachedName="Numero_Tracce_S"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Numero_Tracce_S]"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Numero_Tracce_S]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Stream_Album]"
+                      dataType="r8"
+                      name="Stream_Album" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Stream_Singoli]"
+                      dataType="r8"
+                      name="Stream_Singoli" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Gap_Percentuale (%)]"
+                      dataType="numeric"
+                      name="Gap_Percentuale (%)"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Numero_Tracce_A]"
+                      dataType="ui8"
+                      name="Numero_Tracce_A" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat].ExternalColumns[Numero_Tracce_S]"
+                      dataType="ui8"
+                      name="Numero_Tracce_S" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Ricerca AlbumDim su album_type"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[AlbumDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[AlbumDim]) [refTable]
+where [refTable].[album_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="album_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="album_name" dataType="DT_STR" length="500" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="album_release_date" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="album_type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="disc_number" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="track_number" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[album_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Inputs[Input ricerca].Columns[album_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="album_id"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[album_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">album_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca].Columns[album_type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca].Columns[album_type]"
+                      name="album_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">album_type</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Ricerca ArtistDim su geo_id"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[ArtistDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[ArtistDim]) [refTable]
+where [refTable].[id_author] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_author" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="gender" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birth_date" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="active_start" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="artist_type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="geo_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_author]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Inputs[Input ricerca].Columns[id_author]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="id_author"
+                      lineageId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB].Columns[id_author]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">id_author</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="20"
+                      lineageId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]"
+                      name="geo_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">geo_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Ricerca GeographyDim su region"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[GeographyDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[GeographyDim]) [refTable]
+where [refTable].[geo_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geo_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birth_place" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="province" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="latitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geocode" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Inputs[Input ricerca].Columns[geo_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="geo_id"
+                      lineageId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">geo_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="100"
+                      lineageId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">region</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="Split su artist_type se il contenuto è un album o un singolo"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale].Columns[album_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="album_type"
+                      lineageId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca].Columns[album_type]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]"
+                      name="region" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[SoloAlbum]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="SoloAlbum"
+                  synchronousInputId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">![ISNULL](#{Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]}) &amp;&amp; ![ISNULL](#{Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca].Columns[album_type]}) &amp;&amp; [LOWER](#{Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca].Columns[album_type]}) == "album"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(region) &amp;&amp; !ISNULL(album_type) &amp;&amp; LOWER(album_type) == "album"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[SoloSingoli]"
+                  description="Output 2 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="SoloSingoli"
+                  synchronousInputId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">![ISNULL](#{Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca].Columns[region]}) &amp;&amp; ![ISNULL](#{Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca].Columns[album_type]}) &amp;&amp; [LOWER](#{Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca].Columns[album_type]}) == "single"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(region) &amp;&amp; !ISNULL(album_type) &amp;&amp; LOWER(album_type) == "single"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+              endId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
+              endId="Package\Attività Flusso di dati\Ordinamento su region su album.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
+              endId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Inputs[Input conversione dati]"
+              name="Output colonna derivata"
+              startId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output conversione dati]"
+              endId="Package\Attività Flusso di dati\Output finale su csv.Inputs[Input destinazione file flat]"
+              name="Output conversione dati"
+              startId="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale.Outputs[Output conversione dati]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+              endId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+              endId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca2]"
+              endId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Inputs[Input suddivisione condizionale]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Ricerca GeographyDim su region.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output merge join]"
+              endId="Package\Attività Flusso di dati\Calcolo Gap Percentuale.Inputs[Input colonna derivata]"
+              name="Output merge join"
+              startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+              endId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\Ordinamento su region su album.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento1]"
+              endId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\Ordinamento su region sui singoli.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+              endId="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\Attività Flusso di dati\id_author, album_id, streams_1month.Outputs[Output origine OLE DB]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[SoloAlbum]"
+              endId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album.Inputs[Input aggregazione 1]"
+              name="SoloAlbum"
+              startId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[SoloAlbum]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[SoloSingle]"
+              endId="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo.Inputs[Input aggregazione 1]"
+              name="SoloSingle"
+              startId="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo.Outputs[SoloSingoli]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,41.3333333333334"
+          Id="Package\Attività Flusso di dati"
+          TopLeft="180.000000383173,117.764705779128" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Attività Flusso di dati">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="173.333333333334,44"
+          Id="Package\Attività Flusso di dati\Output finale su csv"
+          TopLeft="548.124975496903,841.495120451083" />
+        <NodeLayout
+          Size="234.666666666667,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Ordinamento su region su album"
+          TopLeft="306.051579607849,518.181836856753" />
+        <NodeLayout
+          Size="405.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per album"
+          TopLeft="227.033725428688,440.947781068568" />
+        <NodeLayout
+          Size="237.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Ricerca GeographyDim su region"
+          TopLeft="503.373006082092,274.388028827073" />
+        <NodeLayout
+          Size="409.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\GROUP BY region, AVG streams_1month, COUNT tracce per singolo"
+          TopLeft="645.42657614466,440.40227036277" />
+        <NodeLayout
+          Size="198.666666666667,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Calcolo Gap Percentuale"
+          TopLeft="540.486086949499,700.883035070082" />
+        <NodeLayout
+          Size="353.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Split su artist_type se il contenuto è un album o un singolo"
+          TopLeft="447.748005758789,352.023322945391" />
+        <NodeLayout
+          Size="240,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type"
+          TopLeft="525.337291550432,98.9824562356248" />
+        <NodeLayout
+          Size="237.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Ordinamento su region sui singoli"
+          TopLeft="730.873001531916,517.245614057857" />
+        <NodeLayout
+          Size="258.666666666667,42.6666666666667"
+          Id="Package\Attività Flusso di dati\id_author, album_id, streams_1month"
+          TopLeft="516.319434007866,9.18988662723782" />
+        <NodeLayout
+          Size="129.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Merge join"
+          TopLeft="579.087288445137,605.2350876439" />
+        <NodeLayout
+          Size="225.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id"
+          TopLeft="519.801576843152,192.075335459381" />
+        <NodeLayout
+          Size="413.333333333334,42.6666666666667"
+          Id="Package\Attività Flusso di dati\Arrotondamento su Stream_Album, Stream_Singoli e Gap Percentuale"
+          TopLeft="431.874980693683,771.245608934103" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output conversione dati]"
+          TopLeft="636.66664476196,813.91227560077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.5828448503128"
+              Start="0,0"
+              End="0,20.0828448503128">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.0828448503128" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
+          TopLeft="639.180533821591,743.549701736749">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.6959071973547"
+              Start="0,0"
+              End="0,20.1959071973547">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.1959071973547" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
+          TopLeft="426.542652518269,483.614447735235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.5673891215183"
+              Start="0,0"
+              End="0,27.0673891215183">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.0673891215183" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+          TopLeft="849.816455504954,483.068937029436">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.1766770284207"
+              Start="0,0"
+              End="0,26.6766770284207">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.6766770284207" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[SoloSingle]"
+          TopLeft="681.970227981012,394.689989612058">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="168.123014830315,45.7122807507118"
+              Start="0,0"
+              End="168.123014830315,38.2122807507118">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.4085518274843" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.4085518274843"
+                    Point2="0,18.4085518274843"
+                    Point3="4,18.4085518274843" />
+                  <mssgle:LineSegment
+                    End="164.123014830315,18.4085518274843" />
+                  <mssgle:CubicBezierSegment
+                    Point1="164.123014830315,18.4085518274843"
+                    Point2="168.123014830315,18.4085518274843"
+                    Point3="168.123014830315,22.4085518274843" />
+                  <mssgle:LineSegment
+                    End="168.123014830315,38.2122807507118" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="59.7119761651575,23.4085518274843,48.6990625,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[SoloAlbum]"
+          TopLeft="566.859116869901,394.689989612058">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.158724774545,46.2577914565103"
+              Start="0,0"
+              End="-137.158724774545,38.7577914565103">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.628231570766" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.628231570766"
+                    Point2="0,18.628231570766"
+                    Point3="-4,18.628231570766" />
+                  <mssgle:LineSegment
+                    End="-133.158724774545,18.628231570766" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.158724774545,18.628231570766"
+                    Point2="-137.158724774545,18.628231570766"
+                    Point3="-137.158724774545,22.628231570766" />
+                  <mssgle:LineSegment
+                    End="-137.158724774545,38.7577914565103" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-92.3380928560225,23.628231570766,47.5174609375,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+          TopLeft="645.495029445816,51.8565532939044">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.1259029417205"
+              Start="0,0"
+              End="0,39.6259029417205">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.6259029417205" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento1]"
+          TopLeft="849.539668198583,559.912280724524">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-185.563490864557,45.3228069193764"
+              Start="0,0"
+              End="-185.563490864557,37.8228069193764">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8613784389787" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8613784389787"
+                    Point2="0,26.8613784389787"
+                    Point3="-4,26.8613784389787" />
+                  <mssgle:LineSegment
+                    End="-181.563490864557,26.8613784389787" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-181.563490864557,26.8613784389787"
+                    Point2="-185.563490864557,26.8613784389787"
+                    Point3="-185.563490864557,30.8613784389787" />
+                  <mssgle:LineSegment
+                    End="-185.563490864557,37.8228069193764" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+          TopLeft="423.384912941182,560.84850352342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="200.146819948399,44.3865841204804"
+              Start="0,0"
+              End="200.146819948399,36.8865841204804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.3065091223214" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.3065091223214"
+                    Point2="0,26.3065091223214"
+                    Point3="4,26.3065091223214" />
+                  <mssgle:LineSegment
+                    End="196.146819948399,26.3065091223214" />
+                  <mssgle:CubicBezierSegment
+                    Point1="196.146819948399,26.3065091223214"
+                    Point2="200.146819948399,26.3065091223214"
+                    Point3="200.146819948399,30.3065091223214" />
+                  <mssgle:LineSegment
+                    End="200.146819948399,36.8865841204804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join]"
+          TopLeft="641.786687697318,647.901754310567">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.9812807595155"
+              Start="0,0"
+              End="0,45.4812807595155">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.4812807595155" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca2]"
+          TopLeft="623.227172587107,317.05469549374">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.9686274516513"
+              Start="0,0"
+              End="0,27.4686274516513">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.4686274516513" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,7.92962622582564,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+          TopLeft="632.468243509818,234.742002126048">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.4285707610597,39.6460267010253"
+              Start="0,0"
+              End="-10.4285707610597,32.1460267010253">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.8230133505127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.8230133505127"
+                    Point2="0,19.8230133505127"
+                    Point3="-4,19.8230133505127" />
+                  <mssgle:LineSegment
+                    End="-6.42857076105975,19.8230133505127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.42857076105975,19.8230133505127"
+                    Point2="-10.4285707610597,19.8230133505127"
+                    Point3="-10.4285707610597,23.8230133505127" />
+                  <mssgle:LineSegment
+                    End="-10.4285707610597,32.1460267010253" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-72.0001642867799,24.8230133505127,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+          TopLeft="645.337291550432,141.649122902292">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.869048040614,50.4262125570893"
+              Start="0,0"
+              End="-12.869048040614,42.9262125570893">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2131062785446" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2131062785446"
+                    Point2="0,25.2131062785446"
+                    Point3="-4,25.2131062785446" />
+                  <mssgle:LineSegment
+                    End="-8.86904804061396,25.2131062785446" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.86904804061396,25.2131062785446"
+                    Point2="-12.869048040614,25.2131062785446"
+                    Point3="-12.869048040614,29.2131062785446" />
+                  <mssgle:LineSegment
+                    End="-12.869048040614,42.9262125570893" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-73.220402926557,30.2131062785446,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Ricerca GeographyDim su region">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[GeographyDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Ricerca AlbumDim su album_type">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[AlbumDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\id_author, album_id, streams_1month">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Ricerca ArtistDim su geo_id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[ArtistDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

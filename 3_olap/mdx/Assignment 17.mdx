@@ -1,0 +1,31 @@
+WITH 
+    -- 1. Recuperiamo gli Stream dell'Anno Precedente
+    MEMBER [Measures].[Streams Prev Year] AS
+    ( 
+        [Measures].[Streams 1month], 
+        [Date Dim].[Year].CurrentMember.PrevMember 
+    )
+
+    -- 2. Calcoliamo la variazione percentuale (Growth)
+    MEMBER [Measures].[YoY Growth] AS
+    DIVIDE(
+        ([Measures].[Streams 1month] - [Measures].[Streams Prev Year]),
+        [Measures].[Streams Prev Year]
+    ), FORMAT_STRING = "Percent"
+
+SELECT 
+    -- COLONNE: Anni
+    NON EMPTY { 
+        EXCEPT(
+            [Date Dim].[Year].[Year].Members,
+            { [Date Dim].[Year].[Unknown] }
+        )
+    } ON COLUMNS,
+
+    -- RIGHE: Le Categorie
+    NON EMPTY { 
+        [Symphony Dim].[Audio Label].[Audio Label].Members 
+    } ON ROWS
+
+FROM [Group ID 6 DB]
+WHERE ( [Measures].[YoY Growth] )

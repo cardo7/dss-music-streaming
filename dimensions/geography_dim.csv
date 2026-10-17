@@ -1,0 +1,48 @@
+geo_id,birth_place,province,region,country,latitude,longitude,geocode
+1,Napoli,Napoli,Campania,Italia,40.8358846,14.2487679,sr60k
+2,Verona,Verona,Veneto,Italia,45.4424977,10.9857377,u0pf9
+3,Genova,,,Italia,44.40726,8.9338624,spyke
+4,La Spezia,La Spezia,Liguria,Italia,44.238366,9.6912326,spygs
+5,Milano,Milano,Lombardia,Italia,45.4641943,9.1896346,u0nd9
+6,Rho,Milano,Lombardia,Italia,45.528878,9.04156,u0n7j
+7,Singapore,,,Italia,45.0806268,7.6707168,u0j2q
+8,Torino,Torino,Piemonte,Italia,45.0677551,7.6824892,u0j2q
+9,Avellino,Avellino,Campania,Italia,40.9965446,15.140569,sr6c0
+10,Roma,Roma,Lazio,Italia,41.8933203,12.4829321,sr2yk
+11,Sternatia,Lecce,Puglia,Italia,40.222125,18.225226,srhuy
+12,Salerno,Salerno,Campania,Italia,40.4194416,15.3106085,sr4vu
+13,Almería,Genova,Liguria,Italia,44.4194958,8.9234821,spyke
+14,Nocera Inferiore,Salerno,Campania,Italia,40.7472133,14.6433202,sr4rv
+15,,,,Italia,,,
+16,Bologna,Bologna,Emilia-Romagna,Italia,44.4938203,11.3426327,srbj4
+17,Vimercate,Monza e della Brianza,Lombardia,Italia,45.6139627,9.37006,u0nem
+18,Alpignano,Torino,Piemonte,Italia,45.0957237,7.5254027,u0j2e
+19,Senigallia,Ancona,Marche,Italia,43.7149517,13.2179488,src2s
+20,Brescia,Brescia,Lombardia,Italia,45.7795804,10.425873,u0pkm
+21,Olbia,Gallura,Sardegna,Italia,40.9232659,9.5027442,spqbb
+22,Leonforte,,,Italia,37.6392121,14.3924267,sqdnp
+23,Palermo,,,Italia,38.1112268,13.3524434,sqc2z
+24,Firenze,Firenze,Toscana,Italia,43.7697955,11.2556404,srb10
+25,Scampia,Napoli,Campania,Italia,40.8999881,14.2410519,sr60s
+26,Vicenza,Vicenza,Veneto,Italia,45.6348591,11.4063543,u205e
+27,Grottaglie,Taranto,Puglia,Italia,40.5361927,17.4342206,srhqs
+28,Nicosia,Enna,Sicilia,Italia,37.747452,14.397271,sqdnx
+29,Gallarate,Varese,Lombardia,Italia,45.6598951,8.7932013,u0n7b
+30,Treviso,Treviso,Veneto,Italia,45.8066913,12.2063158,u20st
+31,Desenzano del Garda,Brescia,Lombardia,Italia,45.4694851,10.5389467,u0p6x
+32,San Benedetto del Tronto,Ascoli Piceno,Marche,Italia,42.9525328,13.8807144,sr9u7
+33,Scafati,Salerno,Campania,Italia,40.7499887,14.5269491,sr4rf
+34,Pieve Emanuele,Milano,Lombardia,Italia,45.3559126,9.2020722,u0nd1
+35,Apulia,,,Italia,40.9842539,16.6210027,sr7c4
+36,San Siro,Milano,Lombardia,Italia,45.4782003,9.123964,u0n6x
+37,Grugliasco,Torino,Piemonte,Italia,45.068046,7.57762,u0j2k
+38,Lodi,Lodi,Lombardia,Italia,45.2613104,9.4916781,u0n9r
+39,Sesto San Giovanni,Milano,Lombardia,Italia,45.5357218,9.2376549,u0ne4
+40,Buenos Aires,,,Italia,44.8037407,10.1430038,spzny
+41,Legnano,,,Italia,45.5946464,8.9181625,u0n76
+42,Varese,,,Italia,45.8397203,8.7541338,u0nhz
+43,Fiumicino,Roma,Lazio,Italia,41.7712145,12.2278855,sr2tw
+44,Padova,Padova,Veneto,Italia,45.391408,11.8058487,u206h
+45,Reggio Calabria,Reggio Calabria,Calabria,Italia,38.1035389,15.6397556,sqg0g
+46,Cagliari,Cagliari,Sardegna,Italia,39.2171994,9.113311,snyrp
+47,Santo Domingo,,,Italia,-0.2465977,-79.1394496,6pzwx

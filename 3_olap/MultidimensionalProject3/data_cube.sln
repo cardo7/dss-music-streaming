@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34031.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "data_cube", "MultidimensionalProject3\data_cube.dwproj", "{E4C875CC-B879-40D8-AC9B-CC3FED95003E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4C875CC-B879-40D8-AC9B-CC3FED95003E}.Development|Default.ActiveCfg = Development
+		{E4C875CC-B879-40D8-AC9B-CC3FED95003E}.Development|Default.Build.0 = Development
+		{E4C875CC-B879-40D8-AC9B-CC3FED95003E}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20761174-37EC-4BBB-99E9-BF754BEB419A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,58 @@
+WITH
+    -- 1. Punteggio Main Artist (0.8)
+    MEMBER [Measures].[Score Main] AS
+    [Measures].[Streams 1month] * 0.8
+
+    -- 2. Punteggio Featured Artist (0.2)
+    MEMBER [Measures].[Score Featured] AS
+    SUM(
+        FILTER(
+            -- Trova tutte le canzoni con stream a prescindere dall'artista principale
+            NONEMPTY(
+               [Text Dim].[Featured Artists].Members, 
+
+               ( [Measures].[Streams 1month], [Artist Dim].[Name].[All] )
+            ), 
+
+            -- Ricerca testuale
+            InStr(
+                1, 
+                [Text Dim].[Featured Artists].CurrentMember.Name, 
+                CASE 
+                    -- Casi rilevati in cui il name e featured_artists non combaciano
+                    WHEN InStr(1, [Artist Dim].[Name].CurrentMember.Name, "guè pequeno", 1) > 0 THEN "Guè"
+                    WHEN InStr(1, [Artist Dim].[Name].CurrentMember.Name, "anna pepe", 1) > 0 THEN "Anna"
+                    WHEN InStr(1, [Artist Dim].[Name].CurrentMember.Name, "chadia rodriguez", 1) > 0 THEN "Chadia"
+                    WHEN InStr(1, [Artist Dim].[Name].CurrentMember.Name, "samuel heron", 1) > 0 THEN "Samuel"
+    
+                    -- Default per tutti gli altri (gestisce in automatico le maiuscole/minuscole)
+                    ELSE [Artist Dim].[Name].CurrentMember.Name
+
+                END,
+                1
+            ) > 0
+        ),
+        -- Sommo i valori trovati
+        ( [Measures].[Streams 1month], [Artist Dim].[Name].[All] )
+    ) * 0.2
+
+    -- Calcolo del totale degli streams (denominatore)
+    MEMBER [Measures].[Total Year Streams] AS
+    ( 
+        [Measures].[Streams 1month],
+        [Artist Dim].[Name].[All],
+        [Text Dim].[Featured Artists].[All]
+    )
+
+    -- Market Share
+    MEMBER [Measures].[Avg Yearly Artist Streams] AS
+    DIVIDE(
+        ( [Measures].[Score Main] + [Measures].[Score Featured]),
+        [Measures].[Total Year Streams]
+    ), FORMAT_STRING = 'Percent'
+
+SELECT
+    NON EMPTY { [Date Dim].[Year].[Year].Members } ON COLUMNS,
+    NON EMPTY { [Artist Dim].[Name].[Name].Members } ON ROWS
+FROM [Group ID 6 DB]
+WHERE ( [Measures].[Avg Yearly Artist Streams] )

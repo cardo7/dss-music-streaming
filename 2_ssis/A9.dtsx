@@ -1,0 +1,1746 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/16/2025 4:55:02 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RIKY"
+  DTS:CreatorName="RIKY\riky9"
+  DTS:DTSID="{7BD6BDC9-0DAC-4111-9403-3A82058BB7F9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{C07213B0-7A6E-4011-8609-EEFD18019DA1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D58640AF-6F72-40A2-BF28-39C4B9FC0EFB}"
+      DTS:ObjectName="localhost.Group_ID_6_DB.Group_ID_6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=Group_ID_6;Initial Catalog=Group_ID_6_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{D58640AF-6F72-40A2-BF28-39C4B9FC0EFB}localhost.Group_ID_6_DB.Group_ID_6;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANpJ+l0NJNkasIJIinD0ApQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACOslYorEFT/PWJCZ1hSUDbvXYJltHXOWHhArJkuTsrigAAAAAOgAAAAAIAACAAAAAvsvZ2KMhxsisa8uZaBq0H8xiyfPwmjcdKb3DcCIQ3PiAAAAATiqMq7URz8TeJbGnfnemRC5jns2Wa61zrzaSHtNX1bkAAAACyRXEy02Vkc8DYbBHD4eA45XY1l93bBN+N+qo48rXqPcVlZUlVBQTQe/9GVWCzo7JgplAabW9715mRkuATkfSa</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Ass 9]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{680390C3-CC5C-4FCD-80EA-8B6A7FF788D5}"
+      DTS:ObjectName="Ass 9">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:DataRowsToSkip="1"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\riky9\source\repos\ssis_project_Group6\output\output_ass_9.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{8C52FCB6-F731-482A-BFF7-63049300D46B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsSummer"
+              DTS:DTSID="{88AC31E4-FBDA-4888-B50C-07CCB6ECE531}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsWinter"
+              DTS:DTSID="{C6D0D533-1D2D-4D16-BEF3-DAADA6CCD2CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreamsSummer"
+              DTS:DTSID="{DA16D8AB-AF4E-4F2D-B51C-F3CAAB3860CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StreamsWinter"
+              DTS:DTSID="{11C71682-C1A4-4926-998B-34A8F9F4C53E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="summer-winter score"
+              DTS:DTSID="{F4E0FFF3-331F-4989-93B5-D0E12D2194EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="summer-winter streams score"
+              DTS:DTSID="{D9F022F4-D6FA-4EAA-81DB-9FB3C0928306}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Compute summer winter score between number of songs and using number of streams"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{8CF8DA68-570A-4A45-97A3-83E7AAED5732}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Compute summer winter score between number of songs and using number of streams"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonna derivata;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea nuovi valori di colonna applicando espressioni alle colonne di input della trasformazione. Creare nuove colonne oppure sovrascrivere quelle esistenti. Ad esempio, concatenare i valori delle colonne 'first name' e 'last name' per creare una colonna 'full name'."
+              name="Calcolo summer_winter score e streams_score"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata]"
+                  description="Input della trasformazione Colonna derivata"
+                  name="Input colonna derivata">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata].Columns[IsSummer]"
+                      cachedDataType="i8"
+                      cachedName="IsSummer"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsSummer]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata].Columns[IsWinter]"
+                      cachedDataType="i8"
+                      cachedName="IsWinter"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsWinter]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata].Columns[StreamsSummer]"
+                      cachedDataType="i8"
+                      cachedName="StreamsSummer"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsSummer]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata].Columns[StreamsWinter]"
+                      cachedDataType="i8"
+                      cachedName="StreamsWinter"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsWinter]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata]"
+                  description="Output predefinito della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  name="Output colonna derivata"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata].Columns[summer-winter score]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata].Columns[summer-winter score]"
+                      name="summer-winter score"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">#{Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsWinter]} == 0 ? NULL(DT_R8) : (DT_R8)#{Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsSummer]} / (DT_R8)#{Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsWinter]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">IsWinter == 0 ? NULL(DT_R8) : (DT_R8)IsSummer / (DT_R8)IsWinter</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata].Columns[summer-winter streams score]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata].Columns[summer-winter streams score]"
+                      name="summer-winter streams score"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">#{Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsWinter]} == 0 ? NULL(DT_R8) : (DT_R8)#{Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsSummer]} / (DT_R8)#{Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsWinter]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">StreamsWinter == 0 ? NULL(DT_R8) : (DT_R8)StreamsSummer / (DT_R8)StreamsWinter</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output errori colonna derivata]"
+                  description="Output degli errori della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori colonna derivata"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonna derivata;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea nuovi valori di colonna applicando espressioni alle colonne di input della trasformazione. Creare nuove colonne oppure sovrascrivere quelle esistenti. Ad esempio, concatenare i valori delle colonne 'first name' e 'last name' per creare una colonna 'full name'."
+              name="Conteggio su summer_winter"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Inputs[Input colonna derivata]"
+                  description="Input della trasformazione Colonna derivata"
+                  name="Input colonna derivata">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Inputs[Input colonna derivata].Columns[streams_1month]"
+                      cachedDataType="i4"
+                      cachedName="streams_1month"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Inputs[Input colonna derivata].Columns[season]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="season"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca].Columns[season]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata]"
+                  description="Output predefinito della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  name="Output colonna derivata"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsSummer]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsSummer]"
+                      name="IsSummer"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">#{Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca].Columns[season]} == "summer" ? 1 : 0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">season == "summer" ? 1 : 0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsWinter]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsWinter]"
+                      name="IsWinter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">#{Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca].Columns[season]} == "winter" ? 1 : 0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">season == "winter" ? 1 : 0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsSummer]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsSummer]"
+                      name="StreamsSummer"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">#{Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca].Columns[season]} == "summer" ? #{Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]} : 0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">season == "summer" ? streams_1month : 0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsWinter]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsWinter]"
+                      name="StreamsWinter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">#{Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca].Columns[season]} == "winter" ? #{Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]} : 0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">season == "winter" ? streams_1month : 0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output errori colonna derivata]"
+                  description="Output degli errori della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori colonna derivata"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="Destinazione file flat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Ass 9]"
+                  connectionManagerRefId="Package.ConnectionManagers[Ass 9]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[region]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].Columns[IsSummer]"
+                      cachedDataType="i8"
+                      cachedName="IsSummer"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[IsSummer]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsSummer]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].Columns[IsWinter]"
+                      cachedDataType="i8"
+                      cachedName="IsWinter"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[IsWinter]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsWinter]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].Columns[StreamsSummer]"
+                      cachedDataType="i8"
+                      cachedName="StreamsSummer"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[StreamsSummer]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsSummer]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].Columns[StreamsWinter]"
+                      cachedDataType="i8"
+                      cachedName="StreamsWinter"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[StreamsWinter]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsWinter]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].Columns[summer-winter score]"
+                      cachedDataType="r8"
+                      cachedName="summer-winter score"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer-winter score]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata].Columns[summer-winter score]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].Columns[summer-winter streams score]"
+                      cachedDataType="r8"
+                      cachedName="summer-winter streams score"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer-winter streams score]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata].Columns[summer-winter streams score]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[IsSummer]"
+                      dataType="i8"
+                      name="IsSummer" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[IsWinter]"
+                      dataType="i8"
+                      name="IsWinter" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[StreamsSummer]"
+                      dataType="i8"
+                      name="StreamsSummer" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[StreamsWinter]"
+                      dataType="i8"
+                      name="StreamsWinter" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer-winter score]"
+                      dataType="r8"
+                      name="summer-winter score" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer-winter streams score]"
+                      dataType="r8"
+                      name="summer-winter streams score" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Origine OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_ID_6].[FactSong]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[date_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_track]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[id_track]"
+                      length="20"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_track]"
+                      name="id_track"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[streams_1month]"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]"
+                      name="streams_1month"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[id_author]"
+                      length="20"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]"
+                      name="id_author"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[id_track]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="id_track" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[streams_1month]"
+                      dataType="i4"
+                      name="streams_1month" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[symp_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="symp_id" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[text_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="text_id" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="id_author" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[album_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="album_id" />
+                    <externalMetadataColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      dataType="i4"
+                      name="date_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[date_id]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[date_id]"
+                      name="date_id" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[id_track]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[id_track]"
+                      name="id_track" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[streams_1month]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[streams_1month]"
+                      name="streams_1month" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[id_author]"
+                      name="id_author" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Ricerca su ArtistDim di geo_id"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[ArtistDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[ArtistDim]) [refTable]
+where [refTable].[id_author] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_author" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="gender" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birth_date" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="active_start" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="artist_type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="geo_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Inputs[Input ricerca].Columns[id_author]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="id_author"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">id_author</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="20"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]"
+                      name="geo_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">geo_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Ricerca su DateDim di season"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[DateDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[DateDim]) [refTable]
+where [refTable].[date_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="date_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="day" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="month" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="season" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="weekday" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[date_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Inputs[Input ricerca].Columns[date_id]"
+                      cachedDataType="i4"
+                      cachedName="date_id"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB].Columns[date_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">date_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca].Columns[season]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="7"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca].Columns[season]"
+                      name="season"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">season</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Ricerca su GeographyDim di region"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[GeographyDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[GeographyDim]) [refTable]
+where [refTable].[geo_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geo_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birth_place" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="province" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="latitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geocode" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Inputs[Input ricerca].Columns[geo_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="geo_id"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output corrispondenza ricerca].Columns[geo_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">geo_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output corrispondenza ricerca].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="100"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output corrispondenza ricerca].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">region</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Somma dei conteggi"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Inputs[Input aggregazione 1].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output corrispondenza ricerca].Columns[region]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Inputs[Input aggregazione 1].Columns[IsSummer]"
+                      cachedDataType="i4"
+                      cachedName="IsSummer"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsSummer]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Inputs[Input aggregazione 1].Columns[IsWinter]"
+                      cachedDataType="i4"
+                      cachedName="IsWinter"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsWinter]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Inputs[Input aggregazione 1].Columns[StreamsSummer]"
+                      cachedDataType="i4"
+                      cachedName="StreamsSummer"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsSummer]" />
+                    <inputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Inputs[Input aggregazione 1].Columns[StreamsWinter]"
+                      cachedDataType="i4"
+                      cachedName="StreamsWinter"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsWinter]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[region]"
+                      name="region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output corrispondenza ricerca].Columns[region]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsSummer]"
+                      dataType="i8"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsSummer]"
+                      name="IsSummer">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsSummer]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsWinter]"
+                      dataType="i8"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[IsWinter]"
+                      name="IsWinter">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[IsWinter]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsSummer]"
+                      dataType="i8"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsSummer]"
+                      name="StreamsSummer">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsSummer]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsWinter]"
+                      dataType="i8"
+                      lineageId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1].Columns[StreamsWinter]"
+                      name="StreamsWinter">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata].Columns[StreamsWinter]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output aggregazione 1]"
+              endId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Inputs[Input colonna derivata]"
+              name="Output aggregazione 1"
+              startId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output colonna derivata]"
+              endId="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi.Inputs[Input aggregazione 1]"
+              name="Output colonna derivata"
+              startId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output colonna derivata1]"
+              endId="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat.Inputs[Input destinazione file flat]"
+              name="Output colonna derivata"
+              startId="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output corrispondenza ricerca]"
+              endId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output corrispondenza ricerca1]"
+              endId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output corrispondenza ricerca2]"
+              endId="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter.Inputs[Input colonna derivata]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output origine OLE DB]"
+              endId="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="490.666666666667,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams"
+          TopLeft="64.999999776483,105.842104759821" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Compute summer winter score between number of songs and using number of streams">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="222.666666666667,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season"
+          TopLeft="699.999974146487,176.842098164096" />
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Somma dei conteggi"
+          TopLeft="443.124980190769,422.842100620435" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB"
+          TopLeft="740.499972082675,99.3157855221934" />
+        <NodeLayout
+          Size="222.666666666667,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id"
+          TopLeft="703.374975023792,255.15788431214" />
+        <NodeLayout
+          Size="248,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region"
+          TopLeft="687.87497641705,330.263144574915" />
+        <NodeLayout
+          Size="301.333333333334,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Calcolo summer_winter score e streams_score"
+          TopLeft="661.249970439822,418.736837507616" />
+        <NodeLayout
+          Size="218.666666666667,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Conteggio su summer_winter"
+          TopLeft="421.249987948687,332.368405545104" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\Compute summer winter score between number of songs and using number of streams\Destinazione file flat"
+          TopLeft="719.374967841432,515.894731177682" />
+        <EdgeLayout
+          Id="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output origine OLE DB]"
+          TopLeft="814.916639781248,141.98245218886">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.8596459752363"
+              Start="0,0"
+              End="0,27.3596459752363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3596459752363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output corrispondenza ricerca2]"
+          TopLeft="687.87497641705,352.649108393343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47.958321801697,0"
+              Start="0,0"
+              End="-40.458321801697,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-40.458321801697,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-87.0150398070985,5,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output corrispondenza ricerca1]"
+          TopLeft="813.291642387087,297.824550978806">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.4385935961091"
+              Start="0,0"
+              End="0,24.9385935961091">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9385935961091" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,6.66460929805456,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output corrispondenza ricerca]"
+          TopLeft="813.020807918472,219.508764830763">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.6491194813761"
+              Start="0,0"
+              End="0,28.1491194813761">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.1491194813761" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,8.26987224068804,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output colonna derivata1]"
+          TopLeft="809.312469140627,461.403504174282">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.4912270034011"
+              Start="0,0"
+              End="0,46.9912270034011">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.9912270034011" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output colonna derivata]"
+          TopLeft="531.187484069728,375.035072211771">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.807028408664"
+              Start="0,0"
+              End="0,40.307028408664">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.307028408664" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Compute summer winter score between number of songs and using number of streams.Paths[Output aggregazione 1]"
+          TopLeft="620.458313524103,442.122802397359">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.7916569157198,0"
+              Start="0,0"
+              End="33.2916569157198,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.2916569157198,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su DateDim di season">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Compute summer winter score between number of songs and using number of streams\Origine OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su ArtistDim di geo_id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[ArtistDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Compute summer winter score between number of songs and using number of streams\Ricerca su GeographyDim di region">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[GeographyDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

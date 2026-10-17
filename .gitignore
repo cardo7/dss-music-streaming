@@ -1,0 +1,19 @@
+# Credentials
+.env
+
+# Visual Studio / SSDT build and user files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS files
+desktop.ini
+Thumbs.db
+.DS_Store

@@ -1,0 +1,199 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6b74d455-30a9-4045-b0df-a0ce7610cdb6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Text Dim</ID>
+  <Name>Text Dim</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="3a7cf2d5-0617-41cb-9de2-a4dfdd6fa310">
+    <DataSourceViewID>Group ID 6 DB</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="9d1acd9f-6ff8-427b-bea1-133005e3cedc">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="6e9981f4-d203-4cbd-a441-0044a6cd4482">
+      <ID>Text Id</ID>
+      <Name>Text Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b25b59f-f768-4c6a-b348-f72598cb728b">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74f7ef40-23f8-4c92-838b-bb465900ec76">
+            <TableID>Group_ID_6_TextDim</TableID>
+            <ColumnID>text_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1fe39ed9-f1d0-4b7c-a06c-b75db26ef4e4">
+          <AttributeID>Lyrics</AttributeID>
+          <Name>Lyrics</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="965dfd7a-73ab-4035-a37b-0b485d14cdfd">
+          <AttributeID>Featured Artists</AttributeID>
+          <Name>Featured Artists</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bc17536e-bb6c-47ae-913b-10909c9ccc7a">
+          <AttributeID>Explicit</AttributeID>
+          <Name>Explicit</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="351022ed-8d2a-4463-8fc7-9d7568b276f1">
+          <AttributeID>n Sentences</AttributeID>
+          <Name>n Sentences</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ad3c37ba-20fd-4c06-8e1a-12d55fa91be7">
+          <AttributeID>n Tokens</AttributeID>
+          <Name>n Tokens</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b711286f-e196-462d-b12a-a507a1062757">
+          <AttributeID>Char Per Tok</AttributeID>
+          <Name>Char Per Tok</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7c076df4-25a4-4d9e-896a-e53445ac4fd4">
+      <ID>Lyrics</ID>
+      <Name>Lyrics</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5a4670b3-e431-44ad-bf53-d2292ab0cf22">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ff73fc7b-7a4a-43c5-a8eb-14cc843302dc">
+            <TableID>Group_ID_6_TextDim</TableID>
+            <ColumnID>lyrics</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="986f1f6b-b3d1-432d-a5d2-72eccf69bc84">
+      <ID>Featured Artists</ID>
+      <Name>Featured Artists</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f56cc813-1dd6-4e02-805a-dcc6043a2f90">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a7dd7fdb-4d45-43ec-9d00-fffba38c174b">
+            <TableID>Group_ID_6_TextDim</TableID>
+            <ColumnID>featured_artists</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8b775740-0762-4010-94c8-16a9c09860fe">
+      <ID>Explicit</ID>
+      <Name>Explicit</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="379be605-d67a-47cf-bee8-e6445ece3a17">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c7086e3d-0861-46e7-8843-6f76e036ab87">
+            <TableID>Group_ID_6_TextDim</TableID>
+            <ColumnID>explicit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="89e0a180-91db-450b-a489-f3951e37b632">
+      <ID>n Sentences</ID>
+      <Name>n Sentences</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3b1e6dd5-3d72-4e52-817b-464bdc0c1381">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="19e71ee4-00d1-4683-9d36-f8837ef3f9d0">
+            <TableID>Group_ID_6_TextDim</TableID>
+            <ColumnID>n_sentences</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bcc095be-ace1-40c9-b38b-8bb43014460d">
+      <ID>n Tokens</ID>
+      <Name>n Tokens</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4cfed2e9-8780-4f32-b817-600b6ccf5a15">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6217e544-b6a4-443b-b719-3db8e525ee95">
+            <TableID>Group_ID_6_TextDim</TableID>
+            <ColumnID>n_tokens</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6d7c30a1-0f19-4d62-b548-937d31a27d0f">
+      <ID>Char Per Tok</ID>
+      <Name>Char Per Tok</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="17e8f035-0c0e-4367-b3f0-a90e2d2384a7">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3897edd-bf16-4f54-838f-cd4bcc302ff9">
+            <TableID>Group_ID_6_TextDim</TableID>
+            <ColumnID>char_per_tok</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

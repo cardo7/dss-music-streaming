@@ -1,0 +1,2238 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/23/2025 12:18:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ACERNITRODIESLI"
+  DTS:CreatorName="ACERNITRODIESLI\Elisa"
+  DTS:DTSID="{42F011E9-37A4-4303-975C-A61CD07702DA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{15707D45-BD3A-4918-8357-D356233D6BEA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D6FDB6B4-8F62-4360-81F1-9AA243750593}"
+      DTS:ObjectName="localhost.Group_ID_6_DB.Group_ID_6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=Group_ID_6;Initial Catalog=Group_ID_6_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{D6FDB6B4-8F62-4360-81F1-9AA243750593}localhost.Group_ID_6_DB.Group_ID_6;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANpJ+l0NJNkasIJIinD0ApQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADk7mqmfqrZBVk2QipejkrRwDXrtGnEbnEwMAD2FPdJkgAAAAAOgAAAAAIAACAAAADgBL2WY6k3SW4+6SL02D7nQ/gXpWYnyp4r1IuUwHNX8iAAAACoSkCdj+IJrR3EDjT3UMg5nLrdsLP+nQeB1SBflfLOOkAAAABlDixyjiIALAe0x1vbIv3d4ZvRImlrobmiTy8aXaIuasHn51x5hSDEywMtDVfn+zZhPHWdAssjt56Y+NxrTijV</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Ass 10]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{49C2BCBC-E295-480A-ABF9-589395BF7037}"
+      DTS:ObjectName="Ass 10">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\riky9\source\repos\ssis_project_Group6\output\output_ass_10.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="audio_label"
+              DTS:DTSID="{9E8134BD-AB76-4BCB-AD20-60E55C2506A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{6DE3FD81-8047-496D-9DDB-B34379ED9D1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Streams_cat_region"
+              DTS:DTSID="{EBB7372D-CBB3-49B0-B7E7-7F1AAA17F982}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="streams_tot_categoria"
+              DTS:DTSID="{6AFEC50B-E88A-4044-BBC6-074E7E673459}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ratio"
+              DTS:DTSID="{B05248C7-E3CA-423F-BE62-34C14C7D60AB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{50862438-BCE8-4340-A2B0-8D5A43F1DE27}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="artist"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[ArtistDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[ArtistDim]) [refTable]
+where [refTable].[id_author] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_author" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="gender" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birth_date" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="active_start" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="artist_type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="geo_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Inputs[Input ricerca].Columns[id_author]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="id_author"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">id_author</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output corrispondenza ricerca].Columns[geo_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="20"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output corrispondenza ricerca].Columns[geo_id]"
+                      name="geo_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">geo_id</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="Destinazione file flat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Ass 10]"
+                  connectionManagerRefId="Package.ConnectionManagers[Ass 10]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].Columns[audio_label]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="audio_label"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[audio_label]"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[audio_label]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[region]"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[region]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].Columns[Streams_cat_region]"
+                      cachedDataType="i8"
+                      cachedName="Streams_cat_region"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[Streams_cat_region]"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[Streams_cat_region]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].Columns[streams_tot_categoria]"
+                      cachedDataType="i8"
+                      cachedName="streams_tot_categoria"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[streams_tot_categoria]"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[streams_tot_categoria]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].Columns[Ratio]"
+                      cachedDataType="numeric"
+                      cachedName="Ratio"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[Ratio]"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output colonna derivata].Columns[Ratio]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[audio_label]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="audio_label" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[Streams_cat_region]"
+                      dataType="i8"
+                      name="Streams_cat_region" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[streams_tot_categoria]"
+                      dataType="i8"
+                      name="streams_tot_categoria" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[Ratio]"
+                      dataType="numeric"
+                      name="Ratio"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Geo"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[GeographyDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[GeographyDim]) [refTable]
+where [refTable].[geo_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geo_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birth_place" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="province" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="latitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geocode" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output corrispondenza ricerca].Columns[geo_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Inputs[Input ricerca].Columns[geo_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="geo_id"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output corrispondenza ricerca].Columns[geo_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">geo_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output corrispondenza ricerca].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="100"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output corrispondenza ricerca].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">region</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro].Columns[audio_label]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="audio_label"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[audio_label]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[region]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro].Columns[Streams_cat_region]"
+                      cachedDataType="i8"
+                      cachedName="Streams_cat_region"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[Streams_cat_region]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join destro].Columns[audio_label]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="audio_label"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento].Columns[audio_label]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join destro].Columns[streams_tot_categoria]"
+                      cachedDataType="i8"
+                      cachedName="streams_tot_categoria"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento].Columns[streams_tot_categoria]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[audio_label]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[audio_label]"
+                      name="audio_label"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro].Columns[audio_label]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[region]"
+                      name="region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro].Columns[region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[Streams_cat_region]"
+                      dataType="i8"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[Streams_cat_region]"
+                      name="Streams_cat_region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro].Columns[Streams_cat_region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[streams_tot_categoria]"
+                      dataType="i8"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[streams_tot_categoria]"
+                      name="streams_tot_categoria">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join destro].Columns[streams_tot_categoria]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Distribuisce ogni riga di input a ogni riga di uno o più output. Ad esempio, creare un nuovo ramo del flusso di dati per creare una copia dei dati in modo che sia possibile mascherare alcuni valori prima di condividerli con partner esterni."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Outputs[Output multicast 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 1"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Outputs[Output multicast 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 2"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Inputs[Input ordinamento].Columns[audio_label]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="audio_label"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[audio_label]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Inputs[Input ordinamento].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[region]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Inputs[Input ordinamento].Columns[Streams_cat_region]"
+                      cachedDataType="i8"
+                      cachedName="Streams_cat_region"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[Streams_cat_region]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[audio_label]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[audio_label]"
+                      name="audio_label"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[audio_label]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[region]"
+                      name="region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[Streams_cat_region]"
+                      dataType="i8"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento].Columns[Streams_cat_region]"
+                      name="Streams_cat_region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[Streams_cat_region]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Inputs[Input ordinamento].Columns[audio_label]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="audio_label"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[audio_label]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Inputs[Input ordinamento].Columns[streams_tot_categoria]"
+                      cachedDataType="i8"
+                      cachedName="streams_tot_categoria"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[streams_tot_categoria]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento].Columns[audio_label]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento].Columns[audio_label]"
+                      name="audio_label"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[audio_label]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento].Columns[streams_tot_categoria]"
+                      dataType="i8"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento].Columns[streams_tot_categoria]"
+                      name="streams_tot_categoria">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[streams_tot_categoria]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Origine OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_ID_6].[FactSong]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[streams_1month]"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]"
+                      name="streams_1month"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[symp_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[symp_id]"
+                      length="20"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[symp_id]"
+                      name="symp_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[id_author]"
+                      length="20"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[id_author]"
+                      name="id_author"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[id_track]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="id_track" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[streams_1month]"
+                      dataType="i4"
+                      name="streams_1month" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[symp_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="symp_id" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[text_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="text_id" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="id_author" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[album_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="album_id" />
+                    <externalMetadataColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[date_id]"
+                      dataType="i4"
+                      name="date_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[streams_1month]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[streams_1month]"
+                      name="streams_1month" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[symp_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[symp_id]"
+                      name="symp_id" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[id_author]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[id_author]"
+                      name="id_author" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonna derivata;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea nuovi valori di colonna applicando espressioni alle colonne di input della trasformazione. Creare nuove colonne oppure sovrascrivere quelle esistenti. Ad esempio, concatenare i valori delle colonne 'first name' e 'last name' per creare una colonna 'full name'."
+              name="Ratio"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Inputs[Input colonna derivata]"
+                  description="Input della trasformazione Colonna derivata"
+                  name="Input colonna derivata">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Inputs[Input colonna derivata].Columns[Streams_cat_region]"
+                      cachedDataType="i8"
+                      cachedName="Streams_cat_region"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[Streams_cat_region]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Inputs[Input colonna derivata].Columns[streams_tot_categoria]"
+                      cachedDataType="i8"
+                      cachedName="streams_tot_categoria"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[streams_tot_categoria]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output colonna derivata]"
+                  description="Output predefinito della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  name="Output colonna derivata"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output colonna derivata].Columns[Ratio]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output colonna derivata].Columns[Ratio]"
+                      name="Ratio"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">(#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[streams_tot_categoria]} - #{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[Streams_cat_region]}) == 0 ? NULL(DT_NUMERIC,10,2) : (DT_NUMERIC,10,2)((DT_R8)#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[Streams_cat_region]} / (DT_R8)(#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[streams_tot_categoria]} - #{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join].Columns[Streams_cat_region]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(streams_tot_categoria - Streams_cat_region) == 0 ? NULL(DT_NUMERIC,10,2) : (DT_NUMERIC,10,2)((DT_R8)Streams_cat_region / (DT_R8)(streams_tot_categoria - Streams_cat_region))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output errori colonna derivata]"
+                  description="Output degli errori della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori colonna derivata"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Streams_cat_regione"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Inputs[Input aggregazione 1].Columns[audio_label]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="audio_label"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca].Columns[audio_label]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Inputs[Input aggregazione 1].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="region"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output corrispondenza ricerca].Columns[region]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Inputs[Input aggregazione 1].Columns[streams_1month]"
+                      cachedDataType="i4"
+                      cachedName="streams_1month"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[audio_label]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[audio_label]"
+                      name="audio_label">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca].Columns[audio_label]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[region]"
+                      name="region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output corrispondenza ricerca].Columns[region]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[Streams_cat_region]"
+                      dataType="i8"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1].Columns[Streams_cat_region]"
+                      name="Streams_cat_region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Streams_tot_cat"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Inputs[Input aggregazione 1].Columns[streams_1month]"
+                      cachedDataType="i4"
+                      cachedName="streams_1month"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]" />
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Inputs[Input aggregazione 1].Columns[audio_label]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="audio_label"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca].Columns[audio_label]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[audio_label]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[audio_label]"
+                      name="audio_label">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca].Columns[audio_label]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[streams_tot_categoria]"
+                      dataType="i8"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1].Columns[streams_tot_categoria]"
+                      name="streams_tot_categoria">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[streams_1month]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Symphony"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_6].[SymphonyDim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_6].[SymphonyDim]) [refTable]
+where [refTable].[symp_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="symp_id" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="bpm" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rolloff" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="flux" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rms" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="flatness" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="spectral_complexity" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="pitch" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="loudness" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="duration_ms" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="popularity" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="audio_label" dataType="DT_STR" length="25" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[symp_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Group_ID_6_DB.Group_ID_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Inputs[Input ricerca].Columns[symp_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="symp_id"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB].Columns[symp_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">symp_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca].Columns[audio_label]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="25"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca].Columns[audio_label]"
+                      name="audio_label"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">audio_label</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Multicast Output 1]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Inputs[Input aggregazione 1]"
+              name="Multicast Output 1"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output aggregazione 1]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output aggregazione 11]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output colonna derivata]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat.Inputs[Input destinazione file flat]"
+              name="Output colonna derivata"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output corrispondenza ricerca]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output corrispondenza ricerca1]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output corrispondenza ricerca2]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Inputs[Multicast Input 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output merge join]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio.Inputs[Input colonna derivata]"
+              name="Output merge join"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output multicast 1]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat.Inputs[Input aggregazione 1]"
+              name="Output multicast 1"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast.Outputs[Output multicast 1]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output ordinamento]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output ordinamento1]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output origine OLE DB]"
+              endId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="508,42.6666666666667"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions"
+          TopLeft="238.089292912269,157.394736225071" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="127.333333333334,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony"
+          TopLeft="581.499991863966,82.4999992996454" />
+        <NodeLayout
+          Size="128,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Merge join"
+          TopLeft="602.9999910146,566.399992907047" />
+        <NodeLayout
+          Size="173.333333333334,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Destinazione file flat"
+          TopLeft="746.910713589354,633.646610956514" />
+        <NodeLayout
+          Size="183.333333333334,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_cat_regione"
+          TopLeft="418.999993756414,401.999994009733" />
+        <NodeLayout
+          Size="142.666666666667,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento"
+          TopLeft="445.999993354082,484.799993383885" />
+        <NodeLayout
+          Size="151.333333333334,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB"
+          TopLeft="567.249991957098,11.2631577161705" />
+        <NodeLayout
+          Size="120,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Multicast"
+          TopLeft="590.999991193414,306.999995425343" />
+        <NodeLayout
+          Size="162,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Streams_tot_cat"
+          TopLeft="730.999989107251,400.999994143844" />
+        <NodeLayout
+          Size="102.666666666667,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ratio"
+          TopLeft="778.249990452081,567.515784101878" />
+        <NodeLayout
+          Size="115.333333333334,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo"
+          TopLeft="600.499991133809,234.499996587634" />
+        <NodeLayout
+          Size="151.333333333334,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Ordinamento 1"
+          TopLeft="751.999988794327,487.399994024634" />
+        <NodeLayout
+          Size="102.666666666667,41.3333333333334"
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist"
+          TopLeft="599.999991059303,161.999997586012" />
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output origine OLE DB]"
+          TopLeft="644.041658577199,52.5964910495039">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.9035082501415"
+              Start="0,0"
+              End="0,22.4035082501415">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.4035082501415" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output ordinamento1]"
+          TopLeft="827.666655460994,528.733327357967">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-140.666664446394,37.6666655490797"
+              Start="0,0"
+              End="-140.666664446394,30.1666655490797">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3209869920472" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3209869920472"
+                    Point2="0,22.3209869920472"
+                    Point3="-4,22.3209869920472" />
+                  <mssgle:LineSegment
+                    End="-136.666664446394,22.3209869920472" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-136.666664446394,22.3209869920472"
+                    Point2="-140.666664446394,22.3209869920472"
+                    Point3="-140.666664446394,26.3209869920472" />
+                  <mssgle:LineSegment
+                    End="-140.666664446394,30.1666655490797" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output ordinamento]"
+          TopLeft="517.333326687415,526.133326717218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="129.666664327185,40.2666661898287"
+              Start="0,0"
+              End="129.666664327185,32.7666661898287">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.8617281124911" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.8617281124911"
+                    Point2="0,23.8617281124911"
+                    Point3="4,23.8617281124911" />
+                  <mssgle:LineSegment
+                    End="125.666664327185,23.8617281124911" />
+                  <mssgle:CubicBezierSegment
+                    Point1="125.666664327185,23.8617281124911"
+                    Point2="129.666664327185,23.8617281124911"
+                    Point3="129.666664327185,27.8617281124911" />
+                  <mssgle:LineSegment
+                    End="129.666664327185,32.7666661898287" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output multicast 1]"
+          TopLeft="669.666657860081,348.333328758676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.33333124717,52.6666653851677"
+              Start="0,0"
+              End="142.33333124717,45.1666653851677">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.4824556176342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.4824556176342"
+                    Point2="0,21.4824556176342"
+                    Point3="4,21.4824556176342" />
+                  <mssgle:LineSegment
+                    End="138.33333124717,21.4824556176342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138.33333124717,21.4824556176342"
+                    Point2="142.33333124717,21.4824556176342"
+                    Point3="142.33333124717,25.4824556176342" />
+                  <mssgle:LineSegment
+                    End="142.33333124717,45.1666653851677" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output merge join]"
+          TopLeft="730.9999910146,587.624555171129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.2499994374813,0"
+              Start="0,0"
+              End="39.7499994374813,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.7499994374813,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output corrispondenza ricerca2]"
+          TopLeft="654.583324496945,275.833329920967">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.1666655043757"
+              Start="0,0"
+              End="0,23.6666655043757">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.6666655043757" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,6.02864525218783,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output corrispondenza ricerca1]"
+          TopLeft="648.149991461635,124.099999299645">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.8999982863665"
+              Start="0,0"
+              End="0,30.3999982863665">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.3999982863665" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,9.39531164318326,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output corrispondenza ricerca]"
+          TopLeft="654.749991096556,203.333330919345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.1666656682887"
+              Start="0,0"
+              End="0,23.6666656682887">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.6666656682887" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,6.02864533414433,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output colonna derivata]"
+          TopLeft="831.580352020718,608.849117435211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.7974935213025"
+              Start="0,0"
+              End="0,17.2974935213025">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2974935213025" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output aggregazione 11]"
+          TopLeft="811.999989107251,442.333327477177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.6666663537426,45.0666665474567"
+              Start="0,0"
+              End="15.6666663537426,37.5666665474567">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5333332737283" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5333332737283"
+                    Point2="0,22.5333332737283"
+                    Point3="4,22.5333332737283" />
+                  <mssgle:LineSegment
+                    End="11.6666663537426,22.5333332737283" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.6666663537426,22.5333332737283"
+                    Point2="15.6666663537426,22.5333332737283"
+                    Point3="15.6666663537426,26.5333332737283" />
+                  <mssgle:LineSegment
+                    End="15.6666663537426,37.5666665474567" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Output aggregazione 1]"
+          TopLeft="513.999993555248,443.333327343066">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.4666660408187"
+              Start="0,0"
+              End="0,33.9666660408187">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.9666660408187" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions.Paths[Multicast Output 1]"
+          TopLeft="632.333324526747,348.333328758676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-121.666664103667,53.6666652510567"
+              Start="0,0"
+              End="-121.666664103667,46.1666652510567">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8903502997731" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8903502997731"
+                    Point2="0,21.8903502997731"
+                    Point3="-4,21.8903502997731" />
+                  <mssgle:LineSegment
+                    End="-117.666664103667,21.8903502997731" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.666664103667,21.8903502997731"
+                    Point2="-121.666664103667,21.8903502997731"
+                    Point3="-121.666664103667,25.8903502997731" />
+                  <mssgle:LineSegment
+                    End="-121.666664103667,46.1666652510567" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Symphony">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[SymphonyDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Geo">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[GeographyDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\Origine OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ratio_cumulative_streams_for_cat_region and tot_streams for same cat in  all other regions\artist">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_6].[ArtistDim]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
